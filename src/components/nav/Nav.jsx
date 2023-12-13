@@ -1,15 +1,17 @@
-import React from 'react';
+import React,{useState }  from 'react';
 import "./Nav.css";
 
 
 const Nav = () => {
+    const[Toggle, showMenu] = useState(false);
+
   return (
     <header className="header">
        <nav className="nav container">
             <a href="index.html" className="nav-logo">
                 Mariano
             </a>
-            <div className="nav-menu">
+            <div className={Toggle ? "nav-menu show-menu" : "nav-menu"}>
                 <ul className="nav-list grid">
                     <li className="nav-item">
                         <a href="#home" className="nav-link active-link">
@@ -53,12 +55,11 @@ const Nav = () => {
                         </a>
                     </li>
                 </ul>
+                <i class="uil uil-times nav-close" onClick={() => showMenu(!Toggle)}></i>
             </div>
-            <div className="nav-toggle">
+
+            <div className="nav-toggle" onClick={() => showMenu(!Toggle)}>
                 <i class="uil uil-apps"></i>
-            </div>
-            <div className="div nav-close">
-                <i class="uil uil-times"></i>
             </div>
        </nav>
     </header>
