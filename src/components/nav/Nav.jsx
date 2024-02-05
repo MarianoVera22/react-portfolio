@@ -9,7 +9,7 @@ const Nav = () => {
     <header className="header">
        <nav className="nav container">
             <a href="index.html" className="nav-logo">
-                Mariano
+                MV
             </a>
             <div className={Toggle ? "nav-menu show-menu" : "nav-menu"}>
                 <ul className="nav-list grid">
@@ -20,12 +20,12 @@ const Nav = () => {
                         </a>
                     </li>
 
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <a href="#acerca" className="nav-link">
                             <i className="uil uil-user nav-icon"></i>
                              Acerca de
                         </a>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item">
                         <a href="#habilidades" className="nav-link">
