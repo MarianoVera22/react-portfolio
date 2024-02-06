@@ -1,6 +1,6 @@
 .home_content {
-  grid-template-columns: 580px repeat(2, 1fr);
-  padding-top: 5.5rem;
+  grid-template-columns: 580px repeat(1, 1fr);
+  padding-top: 4.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   column-gap: 2rem;
@@ -12,6 +12,44 @@
   margin-bottom: var(--mb-0-25);
 }
 
+.home_subtitle {
+  position: relative;
+  font-size: var(--h3-font-size);
+  /* padding-left: 5.4rem; */
+  font-weight: var(--font-normal);
+  margin-bottom: var(--mb-1);
+}
+
+.home_button {
+  color: #dcdcdd;
+  margin-top: 1rem;
+  padding: 10px 15px;
+  background-color: #1985a1;
+  font-size: var(--normal-font-size);
+  border-radius: 15px;
+  transition-duration: 0.4s;
+}
+
+.home_button:hover {
+  box-shadow: inset 0 0 0 3px #4c5c689f;
+}
+
+.home_button:active {
+  transition-duration: 0.2;
+  background-color: #46494c;
+  box-shadow: none;
+}
+
+/* .home_subtitle::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: #219ebc;
+  left: 0;
+  top: 1rem;
+} */
+
 .home_img {
   background: url(../../assets/foto_cv2.jpg);
   background-repeat: no-repeat;
@@ -19,7 +57,44 @@
   background-size: cover;
   width: 300px;
   height: 300px;
-  box-shadow: inset 0 0 0 9px rgb(255, 255, 255 / 30%);
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.3);
   order: 1;
   justify-self: center;
+  /* animation: profile__animate 8s ease-in-out infinite 1s; */
+  border-radius: 100%;
+  /* border: 0.15rem solid #219ebc; */
+}
+
+/* @keyframes profile__animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 70% 50% 40% 80%/50% 20% 60% 30%;
+  }
+
+  100% {
+    border-radius: 50% 30% 20% 60%/70% 40% 90% 50%;
+  }
+} */
+
+@media screen and (max-width: 992px) {
+  .home_content {
+    grid-template-columns: 580px repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
 }
