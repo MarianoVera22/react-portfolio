@@ -8,9 +8,14 @@ const Nav = () => {
   return (
     <header className="header">
        <nav className="nav container">
+       <div className='nav-conf'>
             <a href="index.html" className="nav-logo">
-                MV
+                <i class="uil uil-moon nav-theme"></i>
             </a>
+            <a href="index.html" className="nav-logo">
+                <i class="uil uil-language nav-theme"></i>
+            </a>
+        </div>
             <div className={Toggle ? "nav-menu show-menu" : "nav-menu"}>
                 <ul className="nav-list grid">
                     <li className="nav-item">
