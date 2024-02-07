@@ -1,4 +1,5 @@
 import React from 'react'
+import CV from "../../assets/CV_Vera_Causich_Mariano.pdf"
 
 const Data = () => {
   return (
@@ -12,9 +13,12 @@ const Data = () => {
         <p className="home_description">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem expedita unde maxime ad mollitia tenetur voluptate, dolorem dolor eveniet impedit omnis quasi perferendis ea qui quaerat, repellat praesentium. Provident, adipisci!
         </p>
-        <button className='home_button'>
+
+        <a className='home_button button-flex' href={CV} download="">
           Descargar CV
-        </button>
+
+        </a>
+
     </div>
   )
 }

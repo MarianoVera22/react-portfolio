@@ -136,7 +136,8 @@
     height: 180px;
   }
 
-  .home_button {
+  .home_button,
+  .cv_icon {
     font-size: var(--small-font-size);
   }
 }

@@ -21,7 +21,7 @@ const Nav = () => {
                     <li className="nav-item">
                         <a href="#home" className="nav-link active-link">
                             <i className="uil uil-estate nav-icon"></i>
-                             Home
+                             <p className='nav-text'>Inicio</p>
                         </a>
                     </li>
 
@@ -31,32 +31,33 @@ const Nav = () => {
                              Acerca de
                         </a>
                     </li> */}
+                    <li className="nav-item">
+                        <a href="#trayectoria" className="nav-link">
+                            <i className="uil uil-graduation-cap nav-icon"></i>
+                            <p className='nav-text'>Trayectoria</p>
+                        </a>
+                    </li>
 
                     <li className="nav-item">
                         <a href="#habilidades" className="nav-link">
                             <i className="uil uil-swatchbook nav-icon"></i>
-                             Habilidades
+                            <p className='nav-text'>Habilidades</p>
                         </a>
                     </li>
 
-                    <li className="nav-item">
-                        <a href="#trayectoria" className="nav-link">
-                            <i className="uil uil-graduation-cap nav-icon"></i>
-                             Trayectoria
-                        </a>
-                    </li>
+
 
                     <li className="nav-item">
                         <a href="#proyectos" className="nav-link">
                             <i className="uil uil-rocket nav-icon"></i>
-                             Proyectos
+                            <p className='nav-text'>Proyectos</p>
                         </a>
                     </li>
 
                     <li className="nav-item">
                         <a href="#contacto" className="nav-link">
                             <i className="uil uil-envelope-alt nav-icon"></i>
-                             Contacto
+                            <p className='nav-text'>Contacto</p>
                         </a>
                     </li>
                 </ul>

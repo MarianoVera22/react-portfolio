@@ -76,8 +76,8 @@
     background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: 0.4s;
   }
 
   .show-menu {
@@ -86,7 +86,7 @@
 
   .nav-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
   }
 
@@ -119,12 +119,16 @@
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   .nav-menu {
-    padding: 2rem 0.25rem 4rem;
+    padding: 1rem 0.25rem 3rem;
   }
 
   .nav-list {
-    column-gap: 0;
+    column-gap: 10px;
+  }
+
+  .nav-text {
+    display: none;
   }
 }
