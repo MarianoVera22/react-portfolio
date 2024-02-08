@@ -52,9 +52,10 @@
   transition: 0.3s;
 }
 
-.active-link,
+
 .nav-link:hover {
-  color: var(--title-color-dark);
+  color: #1985a1;
+
 }
 
 /* Breakpoints */

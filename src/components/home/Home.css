@@ -24,21 +24,23 @@
   color: #dcdcdd;
   margin-top: 1rem;
   padding: 10px 15px;
-  background-color: #1985a1;
-  font-size: var(--normal-font-size);
-  border-radius: 15px;
+  background-color: #46494c;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  border-radius: 10px;
   transition-duration: 0.4s;
 }
 
 .home_button:hover {
-  box-shadow: inset 0 0 0 3px #4c5c689f;
+  /* box-shadow: inset 0 0 0 3px #4c5c689f;*/
+  background-color: #1985a1;
 }
 
-.home_button:active {
+/* .home_button:active {
   transition-duration: 0.2;
   background-color: #46494c;
   box-shadow: none;
-}
+} */
 
 /* .home_subtitle::before {
   content: "";
