@@ -1,0 +1,40 @@
+.projects-container {
+    grid-template-columns: repeat(2, max-content);
+    gap: 3rem;
+    justify-content: center;
+}
+
+.projects-card{
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    border-radius: 1rem;
+}
+
+.projects-img {
+    width: 200px;
+    border-radius: 1rem;
+    margin-bottom: var(--mb-1);
+}
+
+.projects-title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-5);
+}
+
+.projects-button{
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.projects-button-icon{
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+
+

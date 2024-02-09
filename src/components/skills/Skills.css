@@ -69,7 +69,6 @@
         grid-template-columns:max-content;
         row-gap: 2rem;
     }
-    
   }
   
 @media screen and (max-width: 576px) {
