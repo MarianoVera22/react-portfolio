@@ -35,15 +35,19 @@
     column-gap: 0.5rem;
 }
 
+.skills-data-open-cv,
+.skills-data-numpy {
+    display: flex;
+    column-gap: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
 .skills-icon{
     font-size: 1.5rem;
     color: var(--title-color);
 }
 
-.skills-icon-uil{
-    font-size: 1.3rem;
-    color: var(--title-color);
-}
+
 
 .skills-name{
     font-size: var(--small-font-size);
@@ -52,10 +56,10 @@
     padding: 0.2rem 0 0 0;
 }
 
-.skills-name-uil{
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
-    line-height: 18px;
-    padding: 0.4rem 0 0 0.2rem;
+
+.matlab, 
+.ros,
+.c-sharp {
+    margin-left: 2px;
 }
 
