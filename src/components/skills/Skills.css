@@ -63,3 +63,32 @@
     margin-left: 2px;
 }
 
+
+@media screen and (max-width: 992px) {
+    .skills-container{
+        grid-template-columns:max-content;
+        row-gap: 2rem;
+    }
+    
+  }
+  
+@media screen and (max-width: 576px) {
+    .skills-container{
+        grid-template-columns: 1fr;
+    }
+
+    .skills-content{
+        padding: 1rem;
+    }
+  }
+  
+@media screen and (max-width: 350px) {
+    .skills-box{
+        column-gap: 1.25rem;
+    }
+    
+    .skills-name{
+        font-size:var(--small-font-size) ;
+    }
+  }
+  

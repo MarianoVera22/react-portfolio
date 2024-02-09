@@ -5,6 +5,7 @@ import Nav from './components/nav/Nav.jsx';
 import Home from './components/home/Home.jsx';
 import Career from "./components/career/Career.jsx";
 import Skills from "./components/skills/Skills.jsx";
+import Projects from "./components/projects/Projects.jsx";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Home />
       <Career />
       <Skills />
+      <Projects />
     </main>
     
   </>
