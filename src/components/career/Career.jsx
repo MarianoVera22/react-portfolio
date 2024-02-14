@@ -13,7 +13,7 @@ const Career = () => {
     <section className="career section" id='trayectoria'>
         <h2 className="section-title">Trayectoria</h2>
         <span className="section-subtitle">Mi camino profesional</span>
-        
+
         <div className="career-container container">
             <div className="career-tabs">
                 <div className={toggleState === 1 ? "career-button career-active button-flex" 
@@ -50,19 +50,18 @@ const Career = () => {
 
                     <div className="career-data">
                         <div></div>
-                        
                         <div>
                             <span className="career-rounder"></span>
                             <span className="career-line"></span>
                         </div>
-                        
+
                         <div>
                             <h3 className="career-title">Automatismo con PLC Siemens</h3>
                             <span className="career-subtitle">Universidad Tecnológica Nacional - Facultad Regional Resistencia</span>
                             <div className="career-calendar">
                                 <i className="uil uil-calendar-alt"></i>{" "}2023 - 2023
                             </div>
-                        </div>   
+                        </div>
                     </div>
 
                     <div className="career-data">
@@ -82,19 +81,19 @@ const Career = () => {
 
                     <div className="career-data">
                         <div></div>
-                        
+
                         <div>
                             <span className="career-rounder"></span>
                             <span className="career-line"></span>
                         </div>
-                        
+
                         <div>
                             <h3 className="career-title">Ingles Nivel 3</h3>
                             <span className="career-subtitle">Centro Universitario de Idiomas - Universidad de Buenos Aires</span>
                             <div className="career-calendar">
                                 <i className="uil uil-calendar-alt"></i>{" "}2023 - 2023
                             </div>
-                        </div>   
+                        </div>
                     </div>
 
                     <div className="career-data">
@@ -114,19 +113,19 @@ const Career = () => {
 
                     <div className="career-data">
                         <div></div>
-                        
+
                         <div>
                             <span className="career-rounder"></span>
                             <span className="career-line"></span>
                         </div>
-                        
+
                         <div>
                             <h3 className="career-title">Desarrollo Web</h3>
                             <span className="career-subtitle">Argentina Programa</span>
                             <div className="career-calendar">
                                 <i className="uil uil-calendar-alt"></i>{" "}2021 - 2021
                             </div>
-                        </div>   
+                        </div>
                     </div>
 
                     <div className="career-data">
@@ -167,19 +166,19 @@ const Career = () => {
 
                     <div className="career-data">
                         <div></div>
-                        
+
                         <div>
                             <span className="career-rounder"></span>
                             <span className="career-line"></span>
                         </div>
-                        
+
                         <div>
                             <h3 className="career-title">Practicas Profesionales</h3>
                             <span className="career-subtitle">Centro de Investigación en Informática para la Ingeniería - Córdoba</span> 
                             <div className="career-calendar">
                                 <i className="uil uil-calendar-alt"></i>{" "}2022 - 2023
                             </div>
-                        </div>   
+                        </div>
                     </div>
 
                     <div className="career-data">

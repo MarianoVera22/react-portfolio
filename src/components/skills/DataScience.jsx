@@ -3,7 +3,7 @@ import React from 'react'
 const DataScience = () => {
   return (
     <div className="skills-content">
-        <h3 className="skills-title">Ciencia de datos</h3>
+        <h3 className="skills-title">Ingeniería</h3>
 
         <div className="skills-box">
             <div className="skills-group">
@@ -60,7 +60,7 @@ const DataScience = () => {
                     fill="hsl(var(--hue), var(--sat), 20%)"/></svg>
                     <div>
                         <h3 className="skills-name">OpenCV</h3>
-                    </div>      
+                    </div>
                 </div>
 
                 <div className="skills-data ros">
@@ -88,8 +88,6 @@ const DataScience = () => {
                         <h3 className="skills-name">LaTeX</h3>
                     </div>
                 </div>
-
-                
             </div>
         </div>
 

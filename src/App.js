@@ -9,16 +9,16 @@ import Projects from "./components/projects/Projects.jsx";
 
 const App = () => {
   return (
-  <>
-    <Nav />
-    <main className="main">
-      <Home />
-      <Career />
-      <Skills />
-      <Projects />
-    </main>
-    
-  </>
+    <>
+      <Nav />
+      <main className="main">
+        <Home />
+        <Skills />
+        <Career />
+        <Projects />
+      </main>
+
+    </>
   );
 }
 
