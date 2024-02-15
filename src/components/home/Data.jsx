@@ -15,8 +15,7 @@ const Data = () => {
         </p>
 
         <a className='home_button button-flex' href={CV} download="">
-          Descargar CV
-
+          Descargar CV<i class='bx bxs-download home-button-icon'></i>
         </a>
 
     </div>

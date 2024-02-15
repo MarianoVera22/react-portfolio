@@ -67,6 +67,13 @@
   /* border: 0.15rem solid #219ebc; */
 }
 
+.home-button-icon {
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
 /* @keyframes profile__animate {
   0% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
