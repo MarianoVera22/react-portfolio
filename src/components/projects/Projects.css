@@ -12,7 +12,7 @@
 }
 
 .projects-img {
-  width: 320px;
+  width: 350px;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -35,11 +35,11 @@
 
 .projects-button-icon {
   font-size: 1rem;
-  transition: 0.4s;
+  transform: translateY(1px);
 }
 
 .projects-button:hover {
-  transform: translateX(0.25rem);
+  color: #1985a1;
 }
 
 /* MODAL */
@@ -76,6 +76,10 @@
   font-size: 1.5rem;
   color: var(--title-color);
   cursor: pointer;
+}
+
+.projects-modal-close:hover {
+  color: #1985a1;
 }
 
 .projects-modal-title {
@@ -119,6 +123,12 @@
 .projects-modal-icon {
   color: var(--title-color);
   font-size: 2rem;
+}
+
+.projects-modal-icon-vs {
+  color: var(--title-color);
+  font-size: 2rem;
+  transform: translateY(-3px);
 }
 
 .projects-modal-button-icon {
