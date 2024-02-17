@@ -28,12 +28,6 @@ const Nav = () => {
                              Acerca de
                         </a>
                     </li> */}
-                    <li className="nav-item">
-                        <a href="#trayectoria" className="nav-link">
-                            <i className="uil uil-graduation-cap nav-icon"></i>
-                            <p className='nav-text'>Trayectoria</p>
-                        </a>
-                    </li>
 
                     <li className="nav-item">
                         <a href="#habilidades" className="nav-link">
@@ -42,6 +36,12 @@ const Nav = () => {
                         </a>
                     </li>
 
+                    <li className="nav-item">
+                        <a href="#trayectoria" className="nav-link">
+                            <i className="uil uil-graduation-cap nav-icon"></i>
+                            <p className='nav-text'>Trayectoria</p>
+                        </a>
+                    </li>
 
 
                     <li className="nav-item">

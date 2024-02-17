@@ -21,7 +21,7 @@ const Projects = () => {
         <span className="section-subtitle">Mis proyectos</span>
 
         <div className="projects-container container grid">
-{/* Proyecto 1 */}
+{/* Proyecto 1: HAT*/}
             <div className="projects-card">
                 <img src={tesis} alt="Raspberry Pi HAT" className="projects-img" />
                 <h3 className="projects-title">HAT de Raspberry Pi</h3>
@@ -87,7 +87,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-{/* Proyecto 2 */}
+{/* Proyecto 2: Streamer app */}
             <div className="projects-card">
                 <img src={aspnet} alt="aspnet" className="projects-img" />
                 <h3 className="projects-title">Streamer App</h3>
@@ -135,7 +135,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-{/* Proyecto 3 */}
+{/* Proyecto 3: Presupuesto personal */}
             <div className="projects-card">
                 <img src={presupuesto} alt="asd" className="projects-img" />
                 <h3 className="projects-title">Presupuesto personal</h3>
@@ -171,20 +171,20 @@ const Projects = () => {
                             </li>
                         </ul>
                         <ul className="projects-modal-links">
-                        {/* <a className='projects-modal-button button-flex' href="">
-                            App
-                        </a> */}
-                        <a className='projects-modal-button button-flex' href="https://github.com/MarianoVera22/PresupuestoAngular" target='_blanck'>
-                            Repositorio<i class='bx bxl-github projects-modal-button-icon'></i>
-                        </a>
-                        {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
-                            Documento<i class='bx bxs-download projects-modal-button-icon'></i>
-                        </a> */}
+                            {/* <a className='projects-modal-button button-flex' href="https://www.google.com/" target='_blanck'>
+                                App<i class='bx bx-link-external projects-modal-button-icon'></i>
+                            </a> */}
+                            <a className='projects-modal-button button-flex' href="https://github.com/MarianoVera22/PresupuestoAngular" target='_blanck'>
+                                Repositorio<i class='bx bxl-github projects-modal-button-icon'></i>
+                            </a>
+                            {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                                Documento<i class='bx bxs-download projects-modal-button-icon'></i>
+                            </a> */}
                         </ul>
                     </div>
                 </div>
             </div>
-{/* Proyecto 4 */}
+    {/* Proyecto 4: Listado de tareas */}
             <div className="projects-card">
                 <img src={listado} alt="asd" className="projects-img" />
                 <h3 className="projects-title">Listado de tareas</h3>
@@ -220,9 +220,9 @@ const Projects = () => {
                             </li>
                         </ul>
                         <ul className="projects-modal-links">
-                        {/* <a className='projects-modal-button button-flex' href="">
-                            App
-                        </a> */}
+                        <a className='projects-modal-button button-flex' href="https://listado-tareas-mvc.netlify.app/" target='_blanck'>
+                            App<i class='bx bx-link-external projects-modal-button-icon'></i>
+                        </a>
                         <a className='projects-modal-button button-flex' href="https://github.com/MarianoVera22/ReactFreeCodeCamp/tree/main/listado%20de%20tareas/listado-de-tareas" target='_blanck'>
                             Repositorio<i class='bx bxl-github projects-modal-button-icon'></i>
                         </a>
@@ -233,7 +233,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-{/* Proyecto 5 */}
+{/* Proyecto 5: Calculadora */}
             <div className="projects-card">
                 <img src={calculadora} alt="asd" className="projects-img" />
                 <h3 className="projects-title">Calculadora</h3>
@@ -269,9 +269,9 @@ const Projects = () => {
                             </li>
                         </ul>
                         <ul className="projects-modal-links">
-                        {/* <a className='projects-modal-button button-flex' href="">
-                            App
-                        </a> */}
+                        <a className='projects-modal-button button-flex' href="https://calculadora-app-mvc.netlify.app/" target='_blanck'>
+                            App<i class='bx bx-link-external projects-modal-button-icon'></i>
+                        </a>
                         <a className='projects-modal-button button-flex' href="https://github.com/MarianoVera22/ReactFreeCodeCamp/tree/main/calculadora/calculadora" target='_blanck'>
                             Repositorio<i class='bx bxl-github projects-modal-button-icon'></i>
                         </a>

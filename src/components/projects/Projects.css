@@ -118,6 +118,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
+  /* justify-content: center; */
 }
 
 .projects-modal-icon {
@@ -182,10 +183,23 @@
   .projects-img {
     width: 100%;
   }
+
+  .projects-modal-content {
+    width: 350px;
+  }
+
+  .projects-modal-skills {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+  }
 }
 
 @media screen and (max-width: 350px) {
   .projects-item {
     font-size: var(--small-font-size);
+  }
+
+  .projects-modal-content {
+    width: 275px;
   }
 }
