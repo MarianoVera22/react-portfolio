@@ -1,4 +1,5 @@
 import React from "react";
+import "./Contact.css";
 
 const Contact = () => {
   return (
@@ -8,7 +9,7 @@ const Contact = () => {
 
       <div className="contact-container container grid">
         <div className="contact-content">
-          <h3 className="contact-title">Redes sociales</h3>
+          <h3 className="contact-title">Via chat</h3>
           <div className="contact-info">
             <div className="contact-card">
               <i className="bx bxl-linkedin-square contact-card-icon"></i>
@@ -22,7 +23,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                LINK
+                Contactame
               </a>
             </div>
 
@@ -33,16 +34,16 @@ const Contact = () => {
               <span className="contact-card-data">+543525531247</span>
 
               <a
-                href="https://www.linkedin.com/in/marianoveracausich/"
+                href="https://wa.me/+5493525531247"
                 className="contact-button"
                 target="_blank"
                 rel="noreferrer"
               >
-                LINK
+                Contactame
               </a>
             </div>
 
-            <div className="contact-card">
+            {/* <div className="contact-card">
               <i className="bx bxl-gmail contact-card-icon"></i>
 
               <h3 className="contact-card-title">Email</h3>
@@ -56,13 +57,13 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                LINK
+                Contactame
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
-        <div className="contact-content">
+        <div className="contact-content-form">
           <h3 className="contact-title">Via email</h3>
           <form className="contact-form">
             <div className="contact-form-div">
