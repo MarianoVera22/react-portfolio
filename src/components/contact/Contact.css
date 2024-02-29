@@ -14,8 +14,8 @@
 
 .contact-info {
   display: grid;
-  row-gap: 2rem;
   grid-template-columns: 300px;
+  row-gap: 1rem;
 }
 
 .contact-card {
@@ -24,6 +24,10 @@
   padding: 1rem;
   border-radius: 0.75rem;
   text-align: center;
+}
+
+.contact-card:hover {
+  border: 1px solid #1985a1;
 }
 
 .contact-card-icon {
@@ -55,10 +59,107 @@
   column-gap: 0.25rem;
 }
 
-.contact-button:hover {
-  color: #1985a1;
+.contact-button-email {
+  color: #dcdcdd;
+  padding: 10px 15px;
+  background-color: #46494c;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+.contact-button-email:hover {
+  /* box-shadow: inset 0 0 0 3px #4c5c689f;*/
+  background-color: #1985a1;
+}
+
+.contact-button-icon {
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
 }
 
 .contact-form {
   width: 360px;
+}
+
+.contact-form-div {
+  position: relative;
+  margin-bottom: var(--mb-2);
+  height: 4rem;
+}
+
+.contact-form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background: none;
+  color: var(--text-color);
+  outline: none;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+.contact-form-tag {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.25rem;
+  font-size: var(--small-font-size);
+  padding: 0.25rem;
+  background-color: var(--body-color);
+  z-index: 10;
+}
+
+.contact-form-area {
+  height: 12.5rem;
+}
+
+.contact-form-area textarea {
+  resize: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 992px) {
+  .contact-container {
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+  }
+
+  .contact-button-email {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
 }

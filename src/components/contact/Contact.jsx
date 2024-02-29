@@ -11,37 +11,47 @@ const Contact = () => {
         <div className="contact-content">
           <h3 className="contact-title">Via chat</h3>
           <div className="contact-info">
-            <div className="contact-card">
+            <a
+              className="contact-card"
+              href="https://www.linkedin.com/in/marianoveracausich/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="bx bxl-linkedin-square contact-card-icon"></i>
 
               <h3 className="contact-card-title">Linkedin</h3>
               <span className="contact-card-data">marianoveracausich</span>
 
-              <a
-                href="https://www.linkedin.com/in/marianoveracausich/"
-                className="contact-button"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Contactame
-              </a>
-            </div>
+              <div className="contact-button">Contactame</div>
+            </a>
 
-            <div className="contact-card">
+            <a
+              className="contact-card"
+              href="https://wa.me/+5493525531247"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="bx bxl-whatsapp-square contact-card-icon"></i>
 
               <h3 className="contact-card-title">WhatsApp</h3>
               <span className="contact-card-data">+543525531247</span>
 
-              <a
-                href="https://wa.me/+5493525531247"
-                className="contact-button"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Contactame
-              </a>
-            </div>
+              <div className="contact-button">Contactame</div>
+            </a>
+
+            <a
+              className="contact-card"
+              href="https://t.me/Marianovera22"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="bx bxl-telegram contact-card-icon"></i>
+
+              <h3 className="contact-card-title">Telegram</h3>
+              <span className="contact-card-data">Marianovera22</span>
+
+              <div className="contact-button">Contactame</div>
+            </a>
 
             {/* <div className="contact-card">
               <i className="bx bxl-gmail contact-card-icon"></i>
@@ -52,14 +62,14 @@ const Contact = () => {
               </span>
 
               <a
-                href="mailto:marianoveracausich@gmail.com.com"
+                href="mailto:marianoveracausich@gmail.com"
                 className="contact-button"
-                target="_blank"
                 rel="noreferrer"
+                tar
               >
                 Contactame
               </a>
-            </div> */}
+            </div>  */}
           </div>
         </div>
 
@@ -90,7 +100,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="contact-form-div">
+            <div className="contact-form-div  contact-form-area">
               <label htmlFor="" className="contact-form-tag">
                 Mensaje
               </label>
@@ -99,12 +109,16 @@ const Contact = () => {
                 cols="30"
                 rows="10"
                 className="contact-form-input"
-                placeholder="Escribeme tu mensaje"
+                placeholder="Escribe tu mensaje"
               ></textarea>
             </div>
 
-            <button className="home_button button-flex" href="" download="">
-              Enviar mensaje<i class="bx bxs-send home-button-icon"></i>
+            <button
+              className="contact-button-email button-flex"
+              href=""
+              download=""
+            >
+              Enviar mensaje<i class="bx bxs-send contact-button-icon"></i>
             </button>
           </form>
         </div>
