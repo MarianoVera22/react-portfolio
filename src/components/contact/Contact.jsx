@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
+  const notify = () => toast.success("Enviado!");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -11,6 +13,7 @@ const Contact = () => {
     emailjs.sendForm("service_5pfooxj", "template_dqmk3kd", form.current, {
       publicKey: "Hmmm_6nHhA0ze_2F4",
     });
+
     e.target.reset();
   };
 
@@ -127,11 +130,11 @@ const Contact = () => {
 
             <button
               className="contact-button-email button-flex"
-              href=""
-              download=""
+              onClick={notify}
             >
               Enviar mensaje<i class="bx bxs-send contact-button-icon"></i>
             </button>
+            <Toaster position="bottom-center" reverseOrder={false} />
           </form>
         </div>
       </div>
