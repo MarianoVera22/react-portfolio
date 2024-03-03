@@ -35,7 +35,7 @@
 }
 
 .footer-social-icon {
-  background-color: var(--title-color);
+  background-color: #46494c;
   color: var(--container-color);
   font-size: 1.125rem;
   padding: 0.4rem;
