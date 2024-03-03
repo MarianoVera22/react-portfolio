@@ -6,11 +6,13 @@ import Career from "./components/career/Career.jsx";
 import Skills from "./components/skills/Skills.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 const App = () => {
   return (
     <>
       <Nav />
+
       <main className="main">
         <Home />
         <Skills />
@@ -19,6 +21,7 @@ const App = () => {
         <Contact />
       </main>
 
+      <Footer />
     </>
   );
 }

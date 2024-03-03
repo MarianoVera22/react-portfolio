@@ -145,6 +145,10 @@
     margin: 0 auto;
   }
 
+  .contact-title {
+    display: none;
+  }
+
   .contact-button-email {
     margin-left: 50%;
     transform: translateX(-50%);
