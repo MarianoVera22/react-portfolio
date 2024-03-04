@@ -9,15 +9,19 @@
 }
 
 .career-button {
-  font-size: var(--h3-font-size);
+  color: #dcdcdd;
+  font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  color: hsl(var(--hue), var(--sat), 60%);
+  padding: 0.5rem 1rem;
+  background-color: hsl(var(--hue), var(--sat), 70%);
   margin: 0 var(--mb-1);
+  border-radius: 10px 10px;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 .career-button:hover {
-  color: var(--title-color-dark);
+  background-color: #1985a1;
 }
 
 .career-icon {
@@ -26,7 +30,7 @@
 }
 
 .career-active {
-  color: var(--title-color-dark);
+  background-color: #46494c;
 }
 
 .career-sections {
@@ -106,5 +110,11 @@
 @media screen and (max-width: 350px) {
   .career-data {
     gap: 0.5rem;
+  }
+
+  .career-button {
+    font-size: var(--small-font-size);
+    /* font-weight: var(--font-medium); */
+    padding: 0.5rem 1rem;
   }
 }

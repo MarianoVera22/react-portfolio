@@ -47,14 +47,24 @@ const Projects = () => {
                 onClick={() => toggleTab(0)}
               ></i>
               <h3 className="projects-modal-title">
-                HAT de Raspberry Pi
+                Hardware HAT de sensor odométrico basado en la fusión de visión
+                y mediciones inerciales.
                 <i class="fa fa-picture-o" aria-hidden="true"></i>
               </h3>
               <p className="projects-modal-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                harum vitae delectus reiciendis, repellendus ut? Quibusdam,
-                exercitationem totam hic animi perspiciatis amet saepe in illum
-                nobis incidunt quod laudantium odit.
+                El proyecto se trato de la primera iteracción en el diseño de un
+                hardware que permita desarrollar un sensor de odometría visual e
+                inercial aplicado a la navegación de robots móviles.
+                <br />
+                La placa dispone de una cámara y sensores inerciales para ser
+                utilizada como plataforma experimental en el desarrollo de
+                algoritomos de fusión sensorial para la estimación de posición
+                de un robot móvil.
+                <br />
+                Además del hardware, se desarrollaron varios scripts de prueba
+                para los diferentes tipos de sensores y se creo un contenedor
+                docker configurado para la comunicación con nuestra Raspberry Pi
+                a traves de I2C.
               </p>
               <p className="projects-modal-skills-title">
                 Herramientas usadas:
@@ -189,10 +199,15 @@ const Projects = () => {
               ></i>
               <h3 className="projects-modal-title">Streamer App</h3>
               <p className="projects-modal-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                harum vitae delectus reiciendis, repellendus ut? Quibusdam,
-                exercitationem totam hic animi perspiciatis amet saepe in illum
-                nobis incidunt quod laudantium odit.
+                Se trata de una app que contiene una base de datos de diferentes
+                servicios de streaming (Netflix, Disney+, Amazon prime, etc.) la
+                cual es configurada a traves de ASP.NET Core.
+                <br />
+                Lo mas interesante de este proyecto es que crea utilizando Clean
+                Architecture y Domain Driven Design de manera profesional.
+                <br />
+                Este proyecto es desarrollado a traves de la plataforma Udemy y
+                estoy en proceso de finalizarlo.
               </p>
               <p className="projects-modal-skills-title">
                 Herramientas usadas:
