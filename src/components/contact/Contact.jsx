@@ -9,6 +9,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    console.log("Enviando formulario...");
 
     emailjs.sendForm("service_5pfooxj", "template_dqmk3kd", form.current, {
       publicKey: "Hmmm_6nHhA0ze_2F4",

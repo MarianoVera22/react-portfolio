@@ -65,6 +65,10 @@ const Projects = () => {
                 para los diferentes tipos de sensores y se creo un contenedor
                 docker configurado para la comunicación con nuestra Raspberry Pi
                 a traves de I2C.
+                <br />
+                Este proyecto fue realizado como tesis de grado de Ingenieria
+                Electrónica junto al Centro de Investigación en Informática para
+                la Ingeniería.
               </p>
               <p className="projects-modal-skills-title">
                 Herramientas usadas:
@@ -296,12 +300,17 @@ const Projects = () => {
                 className="uil uil-times projects-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="projects-modal-title">Presupuesto personal</h3>
+              <h3 className="projects-modal-title">
+                Presupuesto personal desarrollado con Angular
+              </h3>
               <p className="projects-modal-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                harum vitae delectus reiciendis, repellendus ut? Quibusdam,
-                exercitationem totam hic animi perspiciatis amet saepe in illum
-                nobis incidunt quod laudantium odit.
+                Se trata de una app para presupuesto personal donde podemos
+                añadir ingresos y egresos con sus respectivas descripciones y
+                valores.
+                <br />
+                Estos quedaran registrados y se calculara el presupuesto actual
+                disponible asi como tambien el porcentaje que representa cada
+                uno de ellos.
               </p>
               <p className="projects-modal-skills-title">
                 Herramientas usadas:
@@ -373,12 +382,16 @@ const Projects = () => {
                 className="uil uil-times projects-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="projects-modal-title">Listado de tareas</h3>
+              <h3 className="projects-modal-title">
+                Listado de tareas con React
+              </h3>
               <p className="projects-modal-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                harum vitae delectus reiciendis, repellendus ut? Quibusdam,
-                exercitationem totam hic animi perspiciatis amet saepe in illum
-                nobis incidunt quod laudantium odit.
+                Esta app nos permite hacer un listado de tareas muy bien
+                estilada y con funcionalidades como agregar, eliminar o tachar
+                tareas.
+                <br />
+                Este proyecto es parte de un curso de FreeCodeCamp que he
+                realizado.
               </p>
               <p className="projects-modal-skills-title">
                 Herramientas usadas:
@@ -456,12 +469,12 @@ const Projects = () => {
                 className="uil uil-times projects-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="projects-modal-title">Calculadora</h3>
+              <h3 className="projects-modal-title">Calculadora con React</h3>
               <p className="projects-modal-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                harum vitae delectus reiciendis, repellendus ut? Quibusdam,
-                exercitationem totam hic animi perspiciatis amet saepe in illum
-                nobis incidunt quod laudantium odit.
+                Este proyecto se trata de una calculadora totalmente funcional,
+                estilizado y responsive hecha junto a React.
+                <br />
+                Esta app es parte de un curso de FreeCodeCamp que he realizado.
               </p>
               <p className="projects-modal-skills-title">
                 Herramientas usadas:
@@ -541,10 +554,19 @@ const Projects = () => {
               ></i>
               <h3 className="projects-modal-title">Secuencias de luces</h3>
               <p className="projects-modal-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                harum vitae delectus reiciendis, repellendus ut? Quibusdam,
-                exercitationem totam hic animi perspiciatis amet saepe in illum
-                nobis incidunt quod laudantium odit.
+                Se trata de un programa en C++ creado para funcionar en una
+                Raspberry Pi 3 junto a una placa experimental hecha por el
+                grupo.
+                <br />
+                Este cuenta con secuencias de luces LED y la posibilidad de
+                subir o bajar la velocidad de cada una de las secuencias.
+                <br />
+                Se utiliza un protocolo de comunicación en serie para
+                interactuar entre la Raspberry Pi y la placa experimental.
+                <br />
+                Este proyecto se trata de un trabajo practico final de la
+                asignatura Técnicas Digitales II de la carrera Ingeniería
+                Electrónica.
               </p>
               <p className="projects-modal-skills-title">
                 Herramientas usadas:
