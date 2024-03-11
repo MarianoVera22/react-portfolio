@@ -5,6 +5,7 @@ import listado from "../../assets/listadodetareas.png";
 import calculadora from "../../assets/calculadora.png";
 import presupuesto from "../../assets/presupuesto.png";
 import luces from "../../assets/luces.png";
+import vision from "../../assets/opencv-python.png";
 import tesis from "../../assets/Sistema-completo-real.jpg";
 import informetesis from "../../assets/TesisCampetellaVera.pdf";
 import informetd2 from "../../assets/ProyectoFinalTDII.pdf";
@@ -443,15 +444,15 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        {/* Proyecto 5: Calculadora */}
+        {/* Proyecto 5: Vision por computadora */}
         <div className="projects-card">
           <img
-            src={calculadora}
+            src={vision}
             alt="asd"
             className="projects-img"
             onClick={() => toggleTab(5)}
           />
-          <h3 className="projects-title">Calculadora</h3>
+          <h3 className="projects-title">Vision por computadora</h3>
           <span className="projects-button" onClick={() => toggleTab(5)}>
             Ver mas{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
@@ -460,6 +461,115 @@ const Projects = () => {
           <div
             className={
               toggleState === 5
+                ? "projects-modal active-modal"
+                : "projects-modal"
+            }
+          >
+            <div className="projects-modal-content">
+              <i
+                className="uil uil-times projects-modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+              <h3 className="projects-modal-title">Vision por computadora</h3>
+              <p className="projects-modal-description">
+                Se trata de una serie de ejercicios practicos hechos para la
+                materia electiva Visión por computadora en la carrera de
+                Ingeniería Electrónica.
+                <br />
+                En estos proyectos se busca integrar las librerias de OpenCV en
+                Python para manipular imagenes y videos.
+                <br />
+                Dentro de estos practicos podemos encontrar practicos sencillos
+                que van subiendo su dificultad para luego formar parte de una
+                agrupación de herramientas de manipulación de imagenes. Tambien,
+                practicos donde a traves de una imagen y relaciones podemos
+                medir objetos desde una imagen con muy buena precisión.
+              </p>
+              <p className="projects-modal-skills-title">
+                Herramientas usadas:
+              </p>
+              {/* ICONOS DE HERRAMIENTAS */}
+              <ul className="projects-modal-skills">
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-python"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M148.6458282,81.0641403C191.8570709-0.3458452,307.612915-4.617764,356.5062561,73.3931732c37.8880615,60.4514771,13.7960815,135.4847717-41.8233948,167.7876129l-36.121521-62.5643005c22.1270447-12.8510284,31.7114563-42.7013397,16.6385498-66.750618c-19.4511414-31.034935-65.5021057-29.3354645-82.692749,3.0517044c-12.7206879,23.9658356-2.6391449,51.5502472,18.3088379,63.7294922l-36.1482544,62.6105804C142.0118256,210.643219,116.6704254,141.3057709,148.6458282,81.0641403z M167.9667206,374.4708557c-0.0435791,24.2778625-18.934967,46.8978271-46.092804,47.9000549c-36.6418304,1.3522339-61.0877724-37.6520386-43.8971252-70.0392151c13.2918015-25.0418091,43.8297424-31.7192383,65.9928284-19.1222839l36.2165222-62.7288513c-55.7241974-31.7991638-132.6246796-15.0146027-166.0706635,47.9976501c-43.2111893,81.4099731,18.2372913,179.4530945,110.3418884,176.0540161c68.1375427-2.5146179,115.5750122-59.1652527,115.8612366-120.0613708H167.9667206z M451.714386,270.7571411l-36.1215515,62.5642395c22.2027588,12.816864,31.8418274,42.7249451,16.744751,66.8127441c-19.4511414,31.0349426-65.5021057,29.3354797-82.692688-3.0516968c-12.742218-24.0063782-2.6048279-51.643219,18.4154358-63.7908325l-36.1482544-62.6105652c-52.7280579,30.5827942-78.1254272,99.9726562-46.128479,160.2548218c43.2111816,81.4099731,158.9670105,85.6818848,207.8603821,7.6710205C531.5561523,378.1168213,507.4096069,303.0259705,451.714386,270.7571411z"
+                      fill="hsl(var(--hue), var(--sat), 20%)"
+                    />
+                  </svg>
+                </li>
+                <li className="projects-modal-icon">
+                  <svg
+                    height="30"
+                    width="29"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m203.5571289 104.0314026-85.5129776-43.1698227-93.8829498 46.8550644 87.8459167 44.1122284zm39.2245789 19.7910385 89.6654663 45.2887039-93.0251617 46.7120514-87.9823761-44.1772461zm119.7662658-62.3174171 92.1283264 46.2116203-82.4067078 41.375946-89.8473816-45.3341675zm-39.6600036-19.9015656-82.9395752-41.6034584-82.0363007 40.9600105 85.4674835 43.0983696zm-64.8349304 357.1943321v113.2022095l100.4658813-50.1503296-.0909729-113.2477112zm100.3293762-89.7194214-.1169434-112.0517883-100.2124328 49.8318482v112.0907898zm120.6175842-20.9869384v113.6376343l-85.7014465 42.7539062-.0714417-113.1112366zm0-39.7380982v-111.3563537l-85.7924194 42.6823883v112.2792511zm-256.4154358-1.4949035-67.6682739-34.0509949v147.0647278l-90.4257736-191.9634705c-.9877663-2.0473175-5.0427856-4.2831573-6.0825348-4.8356171l-58.4079819-29.8068084v259.9159546l60.1625519 32.2506104v-135.9180299l82.7316437 159.1148376c.8513031 1.7223816 9.0263367 18.2896729 17.8252258 24.1132507 11.6776886 7.7669067 61.8196564 37.9182129 61.8196564 37.9182129z"
+                      fill="hsl(var(--hue), var(--sat), 20%)"
+                    />
+                  </svg>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-visual-studio"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-git"></i>
+                </li>
+              </ul>
+              <ul className="projects-modal-links">
+                {/* <a
+                  className="projects-modal-button button-flex"
+                  href="https://calculadora-app-mvc.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  App
+                  <i class="bx bx-link-external projects-modal-button-icon"></i>
+                </a> */}
+                <a
+                  className="projects-modal-button button-flex"
+                  href="https://github.com/MarianoVera22/Vision-por-computadora"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Repositorio
+                  <i class="bx bxl-github projects-modal-button-icon"></i>
+                </a>
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                            Documento<i class='bx bxs-download projects-modal-button-icon'></i>
+                        </a> */}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* Proyecto 6: Calculadora */}
+        <div className="projects-card">
+          <img
+            src={calculadora}
+            alt="asd"
+            className="projects-img"
+            onClick={() => toggleTab(6)}
+          />
+          <h3 className="projects-title">Calculadora</h3>
+          <span className="projects-button" onClick={() => toggleTab(6)}>
+            Ver mas{" "}
+            <i className="bx bx-right-arrow-alt projects-button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 6
                 ? "projects-modal active-modal"
                 : "projects-modal"
             }
@@ -527,22 +637,23 @@ const Projects = () => {
           </div>
         </div>
 
+        {/* Proyecto 7: Secuencia de luces*/}
         <div className="projects-card">
           <img
             src={luces}
             alt="asd"
             className="projects-img"
-            onClick={() => toggleTab(6)}
+            onClick={() => toggleTab(7)}
           />
           <h3 className="projects-title">Secuencias de luces</h3>
-          <span className="projects-button" onClick={() => toggleTab(6)}>
+          <span className="projects-button" onClick={() => toggleTab(7)}>
             Ver mas{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
           <div
             className={
-              toggleState === 6
+              toggleState === 7
                 ? "projects-modal active-modal"
                 : "projects-modal"
             }
