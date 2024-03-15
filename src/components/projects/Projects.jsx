@@ -452,7 +452,7 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(5)}
           />
-          <h3 className="projects-title">Vision por computadora</h3>
+          <h3 className="projects-title">Visión por computadora</h3>
           <span className="projects-button" onClick={() => toggleTab(5)}>
             Ver mas{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
@@ -470,7 +470,7 @@ const Projects = () => {
                 className="uil uil-times projects-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="projects-modal-title">Vision por computadora</h3>
+              <h3 className="projects-modal-title">Visión por computadora</h3>
               <p className="projects-modal-description">
                 Se trata de una serie de ejercicios practicos hechos para la
                 materia electiva Visión por computadora en la carrera de
