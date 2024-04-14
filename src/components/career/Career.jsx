@@ -50,6 +50,24 @@ const Career = () => {
             }
           >
             <div className="career-data">
+              <div></div>
+              <div>
+                <span className="career-rounder"></span>
+                <span className="career-line"></span>
+              </div>
+
+              <div>
+                <h3 className="career-title">Excel Avanzado</h3>
+                <span className="career-subtitle">
+                  Plataforma Udemy - Global Mentoring
+                </span>
+                <div className="career-calendar">
+                  <i className="uil uil-calendar-alt"></i> 2024 - presente
+                </div>
+              </div>
+            </div>
+
+            <div className="career-data">
               <div>
                 <h3 className="career-title">ASP.NET</h3>
                 <span className="career-subtitle">Plataforma Udemy</span>
