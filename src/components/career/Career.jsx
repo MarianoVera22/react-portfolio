@@ -50,6 +50,56 @@ const Career = () => {
             }
           >
             <div className="career-data">
+              <div>
+                <h3 className="career-title">Clean architecture C# .NET</h3>
+                <span className="career-subtitle">Plataforma Udemy - Hector de Leon</span>
+                <div className="career-calendar">
+                  <i className="uil uil-calendar-alt"></i> 2025 - presente
+                </div>
+              </div>
+
+              <div>
+                <span className="career-rounder"></span>
+                <div className="career-line"></div>
+              </div>
+            </div>
+
+            <div className="career-data">
+              <div></div>
+              <div>
+                <span className="career-rounder"></span>
+                <span className="career-line"></span>
+              </div>
+
+              <div>
+                <h3 className="career-title">C# .NET Avanzado</h3>
+                <span className="career-subtitle">
+                  Plataforma Udemy - Hector de Leon
+                </span>
+                <div className="career-calendar">
+                  <i className="uil uil-calendar-alt"></i> 2025 - 2025
+                </div>
+              </div>
+            </div>
+
+           <div className="career-data">
+              <div>
+                <h3 className="career-title">SQL - MariaDB</h3>
+                <div className="career-calendar">
+                  <span className="career-subtitle">
+                  Plataforma Udemy - Hector de Leon
+                </span>
+                  <i className="uil uil-calendar-alt"></i> 2025 - 2025
+                </div>
+              </div>
+
+              <div>
+                <span className="career-rounder"></span>
+                <div className="career-line"></div>
+              </div>
+            </div>
+
+            <div className="career-data">
               <div></div>
               <div>
                 <span className="career-rounder"></span>
@@ -62,35 +112,14 @@ const Career = () => {
                   Plataforma Udemy - Global Mentoring
                 </span>
                 <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2024 - presente
+                  <i className="uil uil-calendar-alt"></i> 2024 - 2024
                 </div>
               </div>
             </div>
 
             <div className="career-data">
               <div>
-                <h3 className="career-title">ASP.NET</h3>
-                <span className="career-subtitle">Plataforma Udemy</span>
-                <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2024 - Presente
-                </div>
-              </div>
-
-              <div>
-                <span className="career-rounder"></span>
-                <div className="career-line"></div>
-              </div>
-            </div>
-
-            <div className="career-data">
-              <div></div>
-              <div>
-                <span className="career-rounder"></span>
-                <span className="career-line"></span>
-              </div>
-
-              <div>
-                <h3 className="career-title">Automatismo con PLC Siemens</h3>
+                <h3 className="career-title">Automatismo industrial PLC TIA Portal</h3>
                 <span className="career-subtitle">
                   Universidad Tecnológica Nacional - Facultad Regional
                   Resistencia
@@ -99,18 +128,6 @@ const Career = () => {
                   <i className="uil uil-calendar-alt"></i> 2023 - 2023
                 </div>
               </div>
-            </div>
-
-            <div className="career-data">
-              <div>
-                <h3 className="career-title">Ingeniero Electrónico</h3>
-                <span className="career-subtitle">
-                  Universidad Tecnológica Nacional - Facultad Regional Córdoba
-                </span>
-                <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2014 - 2023
-                </div>
-              </div>
 
               <div>
                 <span className="career-rounder"></span>
@@ -127,19 +144,19 @@ const Career = () => {
               </div>
 
               <div>
-                <h3 className="career-title">Ingles Nivel 3</h3>
+                <h3 className="career-title">Ingeniería Electrónica</h3>
                 <span className="career-subtitle">
-                  Centro Universitario de Idiomas - Universidad de Buenos Aires
+                  Universidad Tecnológica Nacional - Facultad Regional Córdoba
                 </span>
                 <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2023 - 2023
+                  <i className="uil uil-calendar-alt"></i> 2014 - 2023
                 </div>
               </div>
             </div>
 
             <div className="career-data">
               <div>
-                <h3 className="career-title">Diseño Web</h3>
+                <h3 className="career-title">Diseño Web (Mediaquery, Bootstrap y React)</h3>
                 <span className="career-subtitle">Plataforma Udemy</span>
                 <div className="career-calendar">
                   <i className="uil uil-calendar-alt"></i> 2021 - 2022
@@ -161,7 +178,7 @@ const Career = () => {
               </div>
 
               <div>
-                <h3 className="career-title">Desarrollo Web</h3>
+                <h3 className="career-title">Desarrollo Web (HTML, CSS, JS, Angular y Java)</h3>
                 <span className="career-subtitle">Argentina Programa</span>
                 <div className="career-calendar">
                   <i className="uil uil-calendar-alt"></i> 2021 - 2021
@@ -169,22 +186,7 @@ const Career = () => {
               </div>
             </div>
 
-            <div className="career-data">
-              <div>
-                <h3 className="career-title">Armado y reparación de PC</h3>
-                <span className="career-subtitle">
-                  Instituto Integral Capacitando - Córdoba
-                </span>
-                <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2019 - 2019
-                </div>
-              </div>
 
-              <div>
-                <span className="career-rounder"></span>
-                <div className="career-line"></div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -196,16 +198,36 @@ const Career = () => {
                 : "career-content"
             }
           >
+
+            <div className="career-data">
+              <div></div>
+
+              <div>
+                <span className="career-rounder"></span>
+                <span className="career-line"></span>
+              </div>
+
+              <div>
+                <h3 className="career-title">Analista de mantenimiento Eléctrico - Automatista</h3>
+                <span className="career-subtitle">
+                  Cartocor Grupo Arcor - Villa del Totoral
+                </span>
+                <div className="career-calendar">
+                  <i className="uil uil-calendar-alt"></i> 2024 - presente
+                </div>
+              </div>
+            </div>
+
             <div className="career-data">
               <div>
                 <h3 className="career-title">
-                  Supervisor Electrónico y Eléctrico
+                  Supervisor Eléctrico - Automatista
                 </h3>
                 <span className="career-subtitle">
                   Fantini Ladrillos Cerámicos - Colonia Caroya
                 </span>
                 <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2023 - Presente
+                  <i className="uil uil-calendar-alt"></i> 2023 - 2024
                 </div>
               </div>
 

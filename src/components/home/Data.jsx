@@ -14,7 +14,7 @@ const Data = () => {
         profesional aprendi a trabajar en equipo desempeñando varios tipos de
         roles como lider, coordinador y ejecutor. Me motivan los desafios y el
         aprendizaje continuo. Me considero una persona responsable, autodidacta,
-        honesta y disiciplinada.
+        honesta y disciplinada.
       </p>
 
       <a className="home_button button-flex" href={CV} download="">
