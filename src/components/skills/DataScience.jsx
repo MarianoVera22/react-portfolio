@@ -59,27 +59,27 @@ const DataScience = () => {
             <div className="skills-group">
                 <div className="skills-data-numpy">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
-<circle cx="24" cy="24" r="21" fill="#fcfdfa"></circle><path fill="#bdbdbd" d="M24,45C12.421,45,3,35.579,3,24S12.421,3,24,3s21,9.421,21,21S35.579,45,24,45z M24,4 C12.972,4,4,12.972,4,24s8.972,20,20,20s20-8.972,20-20S35.028,4,24,4z"></path>
-<path fill="#bdbdbd" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41z M24,8 C15.178,8,8,15.178,8,24s7.178,16,16,16s16-7.178,16-16S32.822,8,24,8z"></path
-><path fill="#bdbdbd" d="M24,37c-7.168,0-13-5.832-13-13s5.832-13,13-13s13,5.832,13,13S31.168,37,24,37z M24,12 c-6.617,0-12,5.383-12,12s5.383,12,12,12s12-5.383,12-12S30.617,12,24,12z"></path>
-<path fill="#bdbdbd" d="M24,33c-4.963,0-9-4.037-9-9s4.037-9,9-9s9,4.037,9,9S28.963,33,24,33z M24,16 c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S28.411,16,24,16z"></path>
-<path fill="#bdbdbd" d="M24,29c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S26.757,29,24,29z M24,20 c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S26.206,20,24,20z"></path>
-<rect width="1" height="21" x="23.5" y="3" fill="#bdbdbd">
-    </rect><rect width="1" height="20.506" x="16.25" y="6.497" fill="#bdbdbd" transform="rotate(-45.001 16.75 16.75)"></rect>
-    <rect width="20" height="1" x="4" y="23.5" fill="#bdbdbd"></rect>
-    <rect width="20.506" height="1" x="6.497" y="30.75" fill="#bdbdbd" transform="rotate(-45.001 16.75 31.25)"></rect>
-    <rect width="1" height="21" x="23.5" y="24" fill="#bdbdbd"></rect>
-    <rect width="1" height="20.408" x="30.715" y="21.011" fill="#bdbdbd" transform="rotate(-45.001 31.215 31.216)"></rect>
-    <rect width="21" height="1" x="24" y="23.5" fill="#bdbdbd"></rect>
-    <rect width="20.506" height="1" x="20.997" y="16.25" fill="#bdbdbd" transform="rotate(-45.001 31.25 16.75)"></rect>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 13,9 19,6"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 28,10 32,12"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="8.5,20 8.5,28 24,24"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 22,35 26,35"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 35,39 39,35"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="14,28 24,24 15,30"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="29.564,20.872 24,24 30.138,22.468"></polygon>
-</svg>
+                    <circle cx="24" cy="24" r="21" fill="#fcfdfa"></circle><path fill="#bdbdbd" d="M24,45C12.421,45,3,35.579,3,24S12.421,3,24,3s21,9.421,21,21S35.579,45,24,45z M24,4 C12.972,4,4,12.972,4,24s8.972,20,20,20s20-8.972,20-20S35.028,4,24,4z"></path>
+                    <path fill="#bdbdbd" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41z M24,8 C15.178,8,8,15.178,8,24s7.178,16,16,16s16-7.178,16-16S32.822,8,24,8z"></path
+                    ><path fill="#bdbdbd" d="M24,37c-7.168,0-13-5.832-13-13s5.832-13,13-13s13,5.832,13,13S31.168,37,24,37z M24,12 c-6.617,0-12,5.383-12,12s5.383,12,12,12s12-5.383,12-12S30.617,12,24,12z"></path>
+                    <path fill="#bdbdbd" d="M24,33c-4.963,0-9-4.037-9-9s4.037-9,9-9s9,4.037,9,9S28.963,33,24,33z M24,16 c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S28.411,16,24,16z"></path>
+                    <path fill="#bdbdbd" d="M24,29c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S26.757,29,24,29z M24,20 c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S26.206,20,24,20z"></path>
+                    <rect width="1" height="21" x="23.5" y="3" fill="#bdbdbd">
+                        </rect><rect width="1" height="20.506" x="16.25" y="6.497" fill="#bdbdbd" transform="rotate(-45.001 16.75 16.75)"></rect>
+                        <rect width="20" height="1" x="4" y="23.5" fill="#bdbdbd"></rect>
+                        <rect width="20.506" height="1" x="6.497" y="30.75" fill="#bdbdbd" transform="rotate(-45.001 16.75 31.25)"></rect>
+                        <rect width="1" height="21" x="23.5" y="24" fill="#bdbdbd"></rect>
+                        <rect width="1" height="20.408" x="30.715" y="21.011" fill="#bdbdbd" transform="rotate(-45.001 31.215 31.216)"></rect>
+                        <rect width="21" height="1" x="24" y="23.5" fill="#bdbdbd"></rect>
+                        <rect width="20.506" height="1" x="20.997" y="16.25" fill="#bdbdbd" transform="rotate(-45.001 31.25 16.75)"></rect>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 13,9 19,6"></polygon>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 28,10 32,12"></polygon>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="8.5,20 8.5,28 24,24"></polygon>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 22,35 26,35"></polygon>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24,24 35,39 39,35"></polygon>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="14,28 24,24 15,30"></polygon>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="29.564,20.872 24,24 30.138,22.468"></polygon>
+                    </svg>
                     <div>
                         <h3 className="skills-name">Matplotlib</h3>
                     </div>
@@ -95,16 +95,16 @@ const DataScience = () => {
 
                 <div className="skills-data-open-cv">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
-<polygon fill="hsl(var(--hue), var(--sat), 20%)" points="21.196,12.276 14.392,8.842 6.922,12.569 13.912,16.078">
-    </polygon><polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24.317,13.85 31.451,17.453 24.049,21.169 17.049,17.654"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="33.846,8.893 41.176,12.569 34.619,15.86 27.47,12.254"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="30.69,7.31 24.091,4 17.564,7.258 24.364,10.687"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="25.532,35.725 25.532,44.73 33.525,40.74 33.518,31.732"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="33.514,28.587 33.505,19.674 25.532,23.637 25.532,32.554"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="43.111,26.918 43.111,35.957 36.292,39.359 36.287,30.361"></polygon>
-    <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="43.111,23.756 43.111,14.898 36.279,18.294 36.285,27.225"></polygon>
-    <path fill="hsl(var(--hue), var(--sat), 20%)" d="M22.71,23.637l-5.384-2.708v11.699c0,0-6.586-14.012-7.195-15.27 c-0.079-0.163-0.401-0.341-0.484-0.385C8.46,16.353,5,14.601,5,14.601v20.676l4.787,2.566V27.031c0,0,6.515,12.52,6.582,12.657 s0.718,1.455,1.418,1.919c0.929,0.618,4.919,3.016,4.919,3.016L22.71,23.637z"></path>
-</svg>
+                        <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="21.196,12.276 14.392,8.842 6.922,12.569 13.912,16.078">
+                            </polygon><polygon fill="hsl(var(--hue), var(--sat), 20%)" points="24.317,13.85 31.451,17.453 24.049,21.169 17.049,17.654"></polygon>
+                            <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="33.846,8.893 41.176,12.569 34.619,15.86 27.47,12.254"></polygon>
+                            <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="30.69,7.31 24.091,4 17.564,7.258 24.364,10.687"></polygon>
+                            <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="25.532,35.725 25.532,44.73 33.525,40.74 33.518,31.732"></polygon>
+                            <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="33.514,28.587 33.505,19.674 25.532,23.637 25.532,32.554"></polygon>
+                            <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="43.111,26.918 43.111,35.957 36.292,39.359 36.287,30.361"></polygon>
+                            <polygon fill="hsl(var(--hue), var(--sat), 20%)" points="43.111,23.756 43.111,14.898 36.279,18.294 36.285,27.225"></polygon>
+                            <path fill="hsl(var(--hue), var(--sat), 20%)" d="M22.71,23.637l-5.384-2.708v11.699c0,0-6.586-14.012-7.195-15.27 c-0.079-0.163-0.401-0.341-0.484-0.385C8.46,16.353,5,14.601,5,14.601v20.676l4.787,2.566V27.031c0,0,6.515,12.52,6.582,12.657 s0.718,1.455,1.418,1.919c0.929,0.618,4.919,3.016,4.919,3.016L22.71,23.637z"></path>
+                        </svg>
                     <div>
                         <h3 className="skills-name">NumPy</h3>
                     </div>

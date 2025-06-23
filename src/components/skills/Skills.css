@@ -60,6 +60,13 @@
   margin-left: 2px;
 }
 
+.lenze{
+  margin-top: 0.6em;
+  color:hsl(var(--hue), var(--sat), 20%);
+  font-size: var(--tiny-font-size);
+  font-weight: var(--font-medium);
+}
+
 @media screen and (max-width: 992px) {
   .skills-container {
     grid-template-columns: max-content;

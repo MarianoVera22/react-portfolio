@@ -113,18 +113,15 @@ const Automation = () => {
                 </div>
 
                 <div className="skills-data">
-                <a  target="_blank" >
-                        <img width='35px'  src="https://findlogovector.com/wp-content/uploads/2019/04/lenze-logo-vector.png" />
-                        </a>
+                        {/* <img width='35px'  filter="grayscale(100%)" src="https://findlogovector.com/wp-content/uploads/2019/04/lenze-logo-vector.png" /> */}
+                   <p className="lenze">Lenze</p>
                     <div>
-                        <h3 className="skills-name">EASY Starter</h3>
+                        <h3 className="skills-name">EASY Engineering</h3>
                     </div>
                 </div>
 
                 <div className="skills-data">
-                    <a  target="_blank" >
-                        <img width='60px' src="https://findlogovector.com/wp-content/uploads/2019/04/lenze-logo-vector.png" />
-                        </a>
+                    <p className="lenze">Lenze</p>
                     <div>
                         <h3 className="skills-name">Global Drive System</h3>
                     </div>
