@@ -198,6 +198,25 @@ const Career = () => {
                 : "career-content"
             }
           >
+            <div className="career-data">
+              <div>
+                <h3 className="career-title">
+                  Jefe sector mantenimiento eléctrico
+                </h3>
+                <span className="career-subtitle">
+                  Bagley Grupo Arcor - Córdoba
+                </span>
+                <div className="career-calendar">
+                  <i className="uil uil-calendar-alt"></i> 2025 - presente
+                </div>
+              </div>
+
+              <div>
+                <span className="career-rounder"></span>
+                <div className="career-line"></div>
+              </div>
+            </div>
+
 
             <div className="career-data">
               <div></div>
@@ -213,7 +232,7 @@ const Career = () => {
                   Cartocor Grupo Arcor - Villa del Totoral
                 </span>
                 <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2024 - presente
+                  <i className="uil uil-calendar-alt"></i> 2024 - 2025
                 </div>
               </div>
             </div>
