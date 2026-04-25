@@ -9,6 +9,11 @@ import vision from "../../assets/opencv-python.png";
 import tesis from "../../assets/Sistema-completo-real.jpg";
 import informetesis from "../../assets/TesisCampetellaVera.pdf";
 import informetd2 from "../../assets/ProyectoFinalTDII.pdf";
+import transbordador from "../../assets/Transbordador.jpeg";
+import r4004 from "../../assets/R4004.jpeg";
+
+
+
 
 const Projects = () => {
   const [toggleState, setToggleState] = useState(0);
@@ -21,7 +26,169 @@ const Projects = () => {
       <h2 className="section-title">Proyectos</h2>
       <span className="section-subtitle">Mis proyectos</span>
       <div className="projects-container container grid">
-        {/* Proyecto 1: HAT*/}
+
+        {/* Proyecto 7: Proyecto dietetica*/}
+
+        {/* Proyecto 6: Cambio de variador R4004*/}
+        <div className="projects-card">
+          <img
+            src={r4004}
+            alt="Impresora R4004"
+            className="projects-img"
+            onClick={() => toggleTab(11)}
+          />
+          <h3 className="projects-title">Upgrade de variadores en impresora flexográfica</h3>
+          <span className="projects-button" onClick={() => toggleTab(11)}>
+            Ver mas
+            <i className="bx bx-right-arrow-alt projects-button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 11
+                ? "projects-modal active-modal"
+                : "projects-modal"
+            }
+          >
+            <div className="projects-modal-content">
+              <i
+                className="uil uil-times projects-modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+              <h3 className="projects-modal-title">
+                Migración de variadores Schneider Altivar 71 a ATV960 en impresora de flexibles R4004
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+              </h3>
+              <p className="projects-modal-description">
+                
+                <br />
+                La impresora flexográfica R4004 operaba con variadores Schneider Altivar 71 
+                declarados obsoletos por el fabricante, sin stock garantizado de repuestos. 
+                Una falla habría dejado la línea fuera de servicio por tiempo indeterminado.
+                <br />
+                Ejecuté la migración completa a variadores Schneider ATV960: dimensionamiento, cableado e instalación física 
+                de los nuevos equipos, y reconfiguración del proyecto PLC en Step 7 — actualización de la topología de red Profinet, 
+                ajustes de hardware y reescritura del bloque de comunicación PLC–variador para asegurar el correcto intercambio de datos.
+                <br />
+                Resultado: línea liberada de obsolescencia, menores costos asociados a 
+                futuras reparaciones y los Altivar 71 reutilizados como respaldo
+                 en otra máquina de la planta, extendiendo el retorno de la inversión original.              
+              </p>
+              <p className="projects-modal-skills-title">
+                Herramientas usadas:
+              </p>
+              {/* ICONOS DE HERRAMIENTAS */}
+              <ul className="projects-modal-skills">
+                <div className="skills-data">
+                    {/* <svg height="40" width="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m.086 13.761v-.722c.41.13.775.195 1.09.195.437 0 .654-.115.654-.347a.278.278 0 0 0 -.096-.216c-.063-.063-.23-.148-.499-.258-.479-.198-.794-.365-.939-.507a.934.934 0 0 1 -.283-.695c0-.36.139-.637.414-.825.27-.188.626-.28 1.062-.28.24 0 .589.043 1.045.133v.692a2.58 2.58 0 0 0 -.945-.202c-.41 0-.613.112-.613.339 0 .084.04.15.124.205.067.042.257.134.565.273.446.197.742.368.891.516a.904.904 0 0 1 .264.673.992.992 0 0 1 -.517.904c-.278.17-.64.256-1.083.256a4.88 4.88 0 0 1 -1.134-.134zm3.31-3.592h1.018v3.65h-1.019zm1.953 3.65v-3.65h2.616v.66h-1.633v.826h1.422v.602h-1.422v.866h1.675v.697zm3.325 0v-3.65h1.322l.917 2.333.943-2.333h1.257v3.65h-.969v-2.584l-1.07 2.622h-.631l-1.05-2.622v2.585h-.72zm5.373 0v-3.65h2.615v.66h-1.632v.826h1.421v.602h-1.421v.866h1.676v.697zm3.33 0v-3.65h1.18l1.255 2.445v-2.444h.72v3.65h-1.152l-1.285-2.475v2.476zm3.878-.058v-.722c.406.13.77.195 1.09.195.436 0 .653-.115.653-.347a.293.293 0 0 0 -.091-.216c-.066-.063-.234-.148-.503-.258-.48-.196-.794-.364-.94-.507a.936.936 0 0 1 -.284-.698c0-.359.138-.634.413-.822.272-.188.626-.28 1.061-.28.249 0 .566.038.956.116l.09.017v.692a2.583 2.583 0 0 0 -.945-.202c-.409 0-.613.112-.613.339 0 .084.04.15.124.204.066.042.254.133.57.274.443.196.738.368.887.516a.903.903 0 0 1 .263.673c0 .396-.17.698-.51.904-.283.17-.644.256-1.089.256-.381 0-.76-.046-1.132-.134z"
+                    /></svg> */}
+                    <div>
+                        <h3 className="skills-name">STEP 7</h3>
+                    </div>
+                </div>
+                
+              </ul>
+              <ul className="projects-modal-links">
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                            App
+                        </a> */}
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                            Repositorio
+                        </a> */}
+                {/* <a
+                  className="projects-modal-button button-flex"
+                  href={informetesis}
+                  download=""
+                >
+                  Documento
+                  <i class="bx bxs-download projects-modal-button-icon"></i>
+                </a> */}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Proyecto 5: PLC Transbordador secadero*/}
+        <div className="projects-card">
+          <img
+            src={transbordador}
+            alt="HMI transbordador"
+            className="projects-img"
+            onClick={() => toggleTab(10)}
+          />
+          <h3 className="projects-title">Automatización de transbordador industrial</h3>
+          <span className="projects-button" onClick={() => toggleTab(10)}>
+            Ver mas
+            <i className="bx bx-right-arrow-alt projects-button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 10
+                ? "projects-modal active-modal"
+                : "projects-modal"
+            }
+          >
+            <div className="projects-modal-content">
+              <i
+                className="uil uil-times projects-modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+              <h3 className="projects-modal-title">
+                Robustecimiento de lógica PLC y desarrollo de HMI para transbordador de carros en secadero de ladrillos cerámicos
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+              </h3>
+              <p className="projects-modal-description">
+                
+                <br />
+                Línea de producción de ladrillos cerámicos con un transbordador automático que mueve carros industriales entre canales de secado.
+                 La lógica original del PLC presentaba puntos ciegos en la gestión de emergencias que, ocasionalmente, derivaban en la caída de un carro a la fosa:
+                  rotura del equipo, daños estructurales y aproximadamente +12 horas de parada de línea por evento.
+                <br />
+                Reescribí la lógica de emergencias en TIA Portal para cubrir los modos de falla detectados haciendo que
+                el transbordador queda en espera hasta validar por sensor que el carro está correctamente
+                posicionado en el canal antes de ejecutar cada descarga.
+                <br />
+                En paralelo, diseñé una pantalla HMI que muestra al operario el estado de todos los sensores del sistema,
+                 la posición del transbordador y las condiciones de emergencia y presencia activas en tiempo real, simplificando el diagnóstico ante cualquier anomalía. 
+                <br />
+                Desde la puesta en marcha de los cambios no se registró ninguna nueva caída de carros, eliminando el modo de falla más costoso de la línea.              
+              </p>
+              <p className="projects-modal-skills-title">
+                Herramientas usadas:
+              </p>
+              {/* ICONOS DE HERRAMIENTAS */}
+              <ul className="projects-modal-skills">
+                <div className="skills-data">
+                    {/* <svg height="40" width="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m.086 13.761v-.722c.41.13.775.195 1.09.195.437 0 .654-.115.654-.347a.278.278 0 0 0 -.096-.216c-.063-.063-.23-.148-.499-.258-.479-.198-.794-.365-.939-.507a.934.934 0 0 1 -.283-.695c0-.36.139-.637.414-.825.27-.188.626-.28 1.062-.28.24 0 .589.043 1.045.133v.692a2.58 2.58 0 0 0 -.945-.202c-.41 0-.613.112-.613.339 0 .084.04.15.124.205.067.042.257.134.565.273.446.197.742.368.891.516a.904.904 0 0 1 .264.673.992.992 0 0 1 -.517.904c-.278.17-.64.256-1.083.256a4.88 4.88 0 0 1 -1.134-.134zm3.31-3.592h1.018v3.65h-1.019zm1.953 3.65v-3.65h2.616v.66h-1.633v.826h1.422v.602h-1.422v.866h1.675v.697zm3.325 0v-3.65h1.322l.917 2.333.943-2.333h1.257v3.65h-.969v-2.584l-1.07 2.622h-.631l-1.05-2.622v2.585h-.72zm5.373 0v-3.65h2.615v.66h-1.632v.826h1.421v.602h-1.421v.866h1.676v.697zm3.33 0v-3.65h1.18l1.255 2.445v-2.444h.72v3.65h-1.152l-1.285-2.475v2.476zm3.878-.058v-.722c.406.13.77.195 1.09.195.436 0 .653-.115.653-.347a.293.293 0 0 0 -.091-.216c-.066-.063-.234-.148-.503-.258-.48-.196-.794-.364-.94-.507a.936.936 0 0 1 -.284-.698c0-.359.138-.634.413-.822.272-.188.626-.28 1.061-.28.249 0 .566.038.956.116l.09.017v.692a2.583 2.583 0 0 0 -.945-.202c-.409 0-.613.112-.613.339 0 .084.04.15.124.204.066.042.254.133.57.274.443.196.738.368.887.516a.903.903 0 0 1 .263.673c0 .396-.17.698-.51.904-.283.17-.644.256-1.089.256-.381 0-.76-.046-1.132-.134z"
+                    /></svg> */}
+                    <div>
+                        <h3 className="skills-name">TIA Portal</h3>
+                    </div>
+                </div>
+                
+              </ul>
+              <ul className="projects-modal-links">
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                            App
+                        </a> */}
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                            Repositorio
+                        </a> */}
+                {/* <a
+                  className="projects-modal-button button-flex"
+                  href={informetesis}
+                  download=""
+                >
+                  Documento
+                  <i class="bx bxs-download projects-modal-button-icon"></i>
+                </a> */}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Proyecto 4: HAT*/}
         <div className="projects-card">
           <img
             src={tesis}
@@ -259,8 +426,8 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        {/* Proyecto 4: Listado de tareas */}
-        <div className="projects-card">
+        {/* Proyecto x: Listado de tareas */}
+        {/*<div className="projects-card">
           <img
             src={listado}
             alt="asd"
@@ -300,7 +467,7 @@ const Projects = () => {
                 Herramientas usadas:
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
-              <ul className="projects-modal-skills">
+              {/*<ul className="projects-modal-skills">
                 <li className="projects-modal-icon">
                   <i class="bx bxl-html5"></i>
                 </li>
@@ -342,11 +509,11 @@ const Projects = () => {
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
                             Documento<i class='bx bxs-download projects-modal-button-icon'></i>
                         </a> */}
-              </ul>
+              {/*</ul>
             </div>
           </div>
-        </div>
-        {/* Proyecto 5: Vision por computadora */}
+        </div> */}
+        {/* Proyecto 2: Vision por computadora */}
         <div className="projects-card">
           <img
             src={vision}
@@ -455,8 +622,8 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        {/* Proyecto 6: Calculadora */}
-        <div className="projects-card">
+        {/* Proyecto x: Calculadora */}
+        {/*<div className="projects-card">
           <img
             src={calculadora}
             alt="asd"
@@ -492,7 +659,7 @@ const Projects = () => {
                 Herramientas usadas:
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
-              <ul className="projects-modal-skills">
+              {/*<ul className="projects-modal-skills">
                 <li className="projects-modal-icon">
                   <i class="bx bxl-html5"></i>
                 </li>
@@ -534,12 +701,12 @@ const Projects = () => {
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
                             Documento<i class='bx bxs-download projects-modal-button-icon'></i>
                         </a> */}
-              </ul>
+              {/*</ul>
             </div>
           </div>
-        </div>
+        </div>*/}
 
-        {/* Proyecto 7: Secuencia de luces*/}
+        {/* Proyecto 1: Secuencia de luces*/}
         <div className="projects-card">
           <img
             src={luces}

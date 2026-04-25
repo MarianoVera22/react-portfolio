@@ -120,12 +120,12 @@ const Automation = () => {
                     </div>
                 </div>
 
-                <div className="skills-data">
+                {/* <div className="skills-data">
                     <p className="lenze">Lenze</p>
                     <div>
                         <h3 className="skills-name">Global Drive System</h3>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </div>

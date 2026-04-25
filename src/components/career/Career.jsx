@@ -51,10 +51,10 @@ const Career = () => {
           >
             <div className="career-data">
               <div>
-                <h3 className="career-title">Clean architecture C# .NET</h3>
-                <span className="career-subtitle">Plataforma Udemy - Hector de Leon</span>
+                <h3 className="career-title">Roadmap Python</h3>
+                <span className="career-subtitle">Autodidacta</span>
                 <div className="career-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2025 - presente
+                  <i className="uil uil-calendar-alt"></i> 2026 - presente
                 </div>
               </div>
 
