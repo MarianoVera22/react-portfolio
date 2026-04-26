@@ -11,6 +11,7 @@ import informetesis from "../../assets/TesisCampetellaVera.pdf";
 import informetd2 from "../../assets/ProyectoFinalTDII.pdf";
 import transbordador from "../../assets/Transbordador.jpeg";
 import r4004 from "../../assets/R4004.jpeg";
+import dietetica from "../../assets/dietetica.jpeg";
 
 
 
@@ -28,6 +29,93 @@ const Projects = () => {
       <div className="projects-container container grid">
 
         {/* Proyecto 7: Proyecto dietetica*/}
+        <div className="projects-card">
+          <img
+            src={dietetica}
+            alt="dietetica"
+            className="projects-img"
+            onClick={() => toggleTab(13)}
+          />
+          <h3 className="projects-title">Sistema de Gestión Dietetica</h3>
+          <span className="projects-button" onClick={() => toggleTab(13)}>
+            Ver mas{" "}
+            <i className="bx bx-right-arrow-alt projects-button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 13
+                ? "projects-modal active-modal"
+                : "projects-modal"
+            }
+          >
+            <div className="projects-modal-content">
+              <i
+                className="uil uil-times projects-modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+              <h3 className="projects-modal-title">
+                Sistema completo de gestión de inventario, ventas y reportes
+              </h3>
+              <p className="projects-modal-description">
+                Desarrollado desde cero, diseñado originalmente para una dietética y arquitectado para 
+                adaptarse a cualquier rubro comercial mediante un único archivo de configuración.
+                <br />
+                Funcionalidades: punto de venta con carrito y múltiples
+                 medios de pago, gestión de inventario con cálculo
+                  automático de margen, control de lotes y vencimientos 
+                  con alertas configurables, ingreso de mercadería con 
+                  actualización inteligente de precios, panel de reportes
+                   financieros protegido por PIN con KPIs mensuales
+                    (ingresos, gasto por proveedor, ganancia neta) 
+                    y exportación a CSV compatible con Excel.
+                <br />
+                    Stack: React 18, Vite 5, JavaScript moderno, CSS3 con variables nativas para tema dinámico, SVG inline.
+              </p>
+              <p className="projects-modal-skills-title">
+                Herramientas usadas:
+              </p>
+              {/* ICONOS DE HERRAMIENTAS */}
+              <ul className="projects-modal-skills">
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-html5"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-css3"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-javascript"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-react"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-visual-studio"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-git"></i>
+                </li>
+              </ul>
+              <ul className="projects-modal-links">
+                {/* <a className='projects-modal-button button-flex' href="https://www.google.com/" target='_blanck'>
+                                App<i class='bx bx-link-external projects-modal-button-icon'></i>
+                            </a> */}
+                <a
+                  className="projects-modal-button button-flex"
+                  href="https://github.com/MarianoVera22/Amapola-App"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Repositorio
+                  <i class="bx bxl-github projects-modal-button-icon"></i>
+                </a>
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                                Documento<i class='bx bxs-download projects-modal-button-icon'></i>
+                            </a> */}
+              </ul>
+            </div>
+          </div>
+        </div>
 
         {/* Proyecto 6: Cambio de variador R4004*/}
         <div className="projects-card">
