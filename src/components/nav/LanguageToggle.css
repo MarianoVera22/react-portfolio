@@ -1,0 +1,109 @@
+/* === Botón toggle de idioma ===
+   Matchea la paleta monocromática del portfolio:
+   - Usa variables del root (--title-color, --body-color, etc.)
+   - Hover teal #1985a1 igual que .nav-link
+   - Banderas desaturadas cuando inactivas, color pleno al activar
+*/
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.4rem;
+  background-color: var(--container-color);
+  border: 1px solid hsl(var(--hue), var(--sat), 85%);
+  border-radius: 2rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lang-toggle:hover {
+  border-color: hsl(var(--hue), var(--sat), 70%);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.25rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.45;
+  filter: grayscale(60%);
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.lang-toggle-btn svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.15rem;
+}
+
+.lang-toggle-btn:hover {
+  opacity: 0.85;
+  filter: grayscale(0%);
+  transform: translateY(-1px);
+}
+
+.lang-toggle-btn.active {
+  opacity: 1;
+  filter: grayscale(0%);
+  box-shadow: 0 0 0 1.5px #1985a1;
+}
+
+.lang-toggle-btn:focus-visible {
+  outline: 2px solid #1985a1;
+  outline-offset: 2px;
+}
+
+.lang-toggle-divider {
+  display: inline-block;
+  width: 1px;
+  height: 0.9rem;
+  background-color: hsl(var(--hue), var(--sat), 80%);
+}
+
+/* === Mobile: el botón se muestra arriba a la derecha
+   porque el nav de links se va al fondo en ≤768px === */
+.lang-toggle-mobile-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* En mobile, el .header se mueve al bottom (ver Nav.css).
+     Creamos una barra superior fija solo para el toggle. */
+  .lang-toggle-mobile-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+  }
+
+  /* Ocultar el toggle que está dentro del nav principal en desktop */
+  .nav .lang-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .lang-toggle-mobile-wrapper {
+    padding: 0.5rem 1rem;
+  }
+
+  .lang-toggle-btn {
+    width: 1.6rem;
+    height: 1.15rem;
+  }
+}

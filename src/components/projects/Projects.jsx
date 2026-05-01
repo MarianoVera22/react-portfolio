@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import { useLanguage } from "../../context/LanguageContext";
 import aspnet from "../../assets/csharp-net.png";
 import listado from "../../assets/listadodetareas.png";
 import calculadora from "../../assets/calculadora.png";
@@ -18,14 +19,15 @@ import dietetica from "../../assets/dietetica.jpeg";
 
 const Projects = () => {
   const [toggleState, setToggleState] = useState(0);
+  const { t } = useLanguage();
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
   return (
     <section className="projects section" id="proyectos">
-      <h2 className="section-title">Proyectos</h2>
-      <span className="section-subtitle">Mis proyectos</span>
+      <h2 className="section-title">{t("projects.title")}</h2>
+      <span className="section-subtitle">{t("projects.subtitle")}</span>
       <div className="projects-container container grid">
 
         {/* Proyecto 7: Proyecto dietetica*/}
@@ -36,9 +38,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(13)}
           />
-          <h3 className="projects-title">Sistema de Gestión Dietetica</h3>
+          <h3 className="projects-title">{t("projects.p1CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(13)}>
-            Ver mas{" "}
+            {t("projects.seeMore")}{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -55,25 +57,17 @@ const Projects = () => {
                 onClick={() => toggleTab(0)}
               ></i>
               <h3 className="projects-modal-title">
-                Sistema completo de gestión de inventario, ventas y reportes
+                {t("projects.p1ModalTitle")}
               </h3>
               <p className="projects-modal-description">
-                Desarrollado desde cero, diseñado originalmente para una dietética y arquitectado para 
-                adaptarse a cualquier rubro comercial mediante un único archivo de configuración.
+                {t("projects.p1Desc1")}
                 <br />
-                Funcionalidades: punto de venta con carrito y múltiples
-                 medios de pago, gestión de inventario con cálculo
-                  automático de margen, control de lotes y vencimientos 
-                  con alertas configurables, ingreso de mercadería con 
-                  actualización inteligente de precios, panel de reportes
-                   financieros protegido por PIN con KPIs mensuales
-                    (ingresos, gasto por proveedor, ganancia neta) 
-                    y exportación a CSV compatible con Excel.
+                {t("projects.p1Desc2")}
                 <br />
-                    Stack: React 18, Vite 5, JavaScript moderno, CSS3 con variables nativas para tema dinámico, SVG inline.
+                {t("projects.p1Desc3")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               <ul className="projects-modal-skills">
@@ -106,7 +100,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Repositorio
+                  {t("projects.btnRepo")}
                   <i class="bx bxl-github projects-modal-button-icon"></i>
                 </a>
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
@@ -125,9 +119,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(11)}
           />
-          <h3 className="projects-title">Upgrade de variadores en impresora flexográfica</h3>
+          <h3 className="projects-title">{t("projects.p2CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(11)}>
-            Ver mas
+            {t("projects.seeMore")}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -144,26 +138,18 @@ const Projects = () => {
                 onClick={() => toggleTab(0)}
               ></i>
               <h3 className="projects-modal-title">
-                Migración de variadores Schneider Altivar 71 a ATV960 en impresora de flexibles R4004
+                {t("projects.p2ModalTitle")}
                 <i class="fa fa-picture-o" aria-hidden="true"></i>
               </h3>
               <p className="projects-modal-description">
-                
+                {t("projects.p2Desc1")}
                 <br />
-                La impresora flexográfica R4004 operaba con variadores Schneider Altivar 71 
-                declarados obsoletos por el fabricante, sin stock garantizado de repuestos. 
-                Una falla habría dejado la línea fuera de servicio por tiempo indeterminado.
+                {t("projects.p2Desc2")}
                 <br />
-                Ejecuté la migración completa a variadores Schneider ATV960: dimensionamiento, cableado e instalación física 
-                de los nuevos equipos, y reconfiguración del proyecto PLC en Step 7 — actualización de la topología de red Profinet, 
-                ajustes de hardware y reescritura del bloque de comunicación PLC–variador para asegurar el correcto intercambio de datos.
-                <br />
-                Resultado: línea liberada de obsolescencia, menores costos asociados a 
-                futuras reparaciones y los Altivar 71 reutilizados como respaldo
-                 en otra máquina de la planta, extendiendo el retorno de la inversión original.              
+                {t("projects.p2Desc3")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               <ul className="projects-modal-skills">
@@ -178,17 +164,17 @@ const Projects = () => {
               </ul>
               <ul className="projects-modal-links">
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
-                            App
+                            {t("projects.btnApp")}
                         </a> */}
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
-                            Repositorio
+                            {t("projects.btnRepo")}
                         </a> */}
                 {/* <a
                   className="projects-modal-button button-flex"
                   href={informetesis}
                   download=""
                 >
-                  Documento
+                  {t("projects.btnDoc")}
                   <i class="bx bxs-download projects-modal-button-icon"></i>
                 </a> */}
               </ul>
@@ -204,9 +190,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(10)}
           />
-          <h3 className="projects-title">Automatización de transbordador industrial</h3>
+          <h3 className="projects-title">{t("projects.p3CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(10)}>
-            Ver mas
+            {t("projects.seeMore")}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -223,27 +209,20 @@ const Projects = () => {
                 onClick={() => toggleTab(0)}
               ></i>
               <h3 className="projects-modal-title">
-                Robustecimiento de lógica PLC y desarrollo de HMI para transbordador de carros en secadero de ladrillos cerámicos
+                {t("projects.p3ModalTitle")}
                 <i class="fa fa-picture-o" aria-hidden="true"></i>
               </h3>
               <p className="projects-modal-description">
-                
+                {t("projects.p3Desc1")}
                 <br />
-                Línea de producción de ladrillos cerámicos con un transbordador automático que mueve carros industriales entre canales de secado.
-                 La lógica original del PLC presentaba puntos ciegos en la gestión de emergencias que, ocasionalmente, derivaban en la caída de un carro a la fosa:
-                  rotura del equipo, daños estructurales y aproximadamente +12 horas de parada de línea por evento.
+                {t("projects.p3Desc2")}
                 <br />
-                Reescribí la lógica de emergencias en TIA Portal para cubrir los modos de falla detectados haciendo que
-                el transbordador queda en espera hasta validar por sensor que el carro está correctamente
-                posicionado en el canal antes de ejecutar cada descarga.
+                {t("projects.p3Desc3")}
                 <br />
-                En paralelo, diseñé una pantalla HMI que muestra al operario el estado de todos los sensores del sistema,
-                 la posición del transbordador y las condiciones de emergencia y presencia activas en tiempo real, simplificando el diagnóstico ante cualquier anomalía. 
-                <br />
-                Desde la puesta en marcha de los cambios no se registró ninguna nueva caída de carros, eliminando el modo de falla más costoso de la línea.              
+                {t("projects.p3Desc4")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               <ul className="projects-modal-skills">
@@ -258,17 +237,17 @@ const Projects = () => {
               </ul>
               <ul className="projects-modal-links">
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
-                            App
+                            {t("projects.btnApp")}
                         </a> */}
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
-                            Repositorio
+                            {t("projects.btnRepo")}
                         </a> */}
                 {/* <a
                   className="projects-modal-button button-flex"
                   href={informetesis}
                   download=""
                 >
-                  Documento
+                  {t("projects.btnDoc")}
                   <i class="bx bxs-download projects-modal-button-icon"></i>
                 </a> */}
               </ul>
@@ -284,9 +263,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(1)}
           />
-          <h3 className="projects-title">HAT de Raspberry Pi</h3>
+          <h3 className="projects-title">{t("projects.p4CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(1)}>
-            Ver mas
+            {t("projects.seeMore")}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -303,31 +282,20 @@ const Projects = () => {
                 onClick={() => toggleTab(0)}
               ></i>
               <h3 className="projects-modal-title">
-                Hardware HAT de sensor odométrico basado en la fusión de visión
-                y mediciones inerciales.
+                {t("projects.p4ModalTitle")}
                 <i class="fa fa-picture-o" aria-hidden="true"></i>
               </h3>
               <p className="projects-modal-description">
-                El proyecto se trato de la primera iteracción en el diseño de un
-                hardware que permita desarrollar un sensor de odometría visual e
-                inercial aplicado a la navegación de robots móviles.
+                {t("projects.p4Desc1")}
                 <br />
-                La placa dispone de una cámara y sensores inerciales para ser
-                utilizada como plataforma experimental en el desarrollo de
-                algoritomos de fusión sensorial para la estimación de posición
-                de un robot móvil.
+                {t("projects.p4Desc2")}
                 <br />
-                Además del hardware, se desarrollaron varios scripts de prueba
-                para los diferentes tipos de sensores y se creo un contenedor
-                docker configurado para la comunicación con nuestra Raspberry Pi
-                a traves de I2C.
+                {t("projects.p4Desc3")}
                 <br />
-                Este proyecto fue realizado como tesis de grado de Ingenieria
-                Electrónica junto al Centro de Investigación en Informática para
-                la Ingeniería.
+                {t("projects.p4Desc4")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               <ul className="projects-modal-skills">
@@ -414,17 +382,17 @@ const Projects = () => {
               </ul>
               <ul className="projects-modal-links">
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
-                            App
+                            {t("projects.btnApp")}
                         </a> */}
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
-                            Repositorio
+                            {t("projects.btnRepo")}
                         </a> */}
                 <a
                   className="projects-modal-button button-flex"
                   href={informetesis}
                   download=""
                 >
-                  Documento
+                  {t("projects.btnDoc")}
                   <i class="bx bxs-download projects-modal-button-icon"></i>
                 </a>
               </ul>
@@ -440,9 +408,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(3)}
           />
-          <h3 className="projects-title">Presupuesto personal</h3>
+          <h3 className="projects-title">{t("projects.p5CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(3)}>
-            Ver mas{" "}
+            {t("projects.seeMore")}{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -459,19 +427,15 @@ const Projects = () => {
                 onClick={() => toggleTab(0)}
               ></i>
               <h3 className="projects-modal-title">
-                Presupuesto personal desarrollado con Angular
+                {t("projects.p5ModalTitle")}
               </h3>
               <p className="projects-modal-description">
-                Se trata de una app para presupuesto personal donde podemos
-                añadir ingresos y egresos con sus respectivas descripciones y
-                valores.
+                {t("projects.p5Desc1")}
                 <br />
-                Estos quedaran registrados y se calculara el presupuesto actual
-                disponible asi como tambien el porcentaje que representa cada
-                uno de ellos.
+                {t("projects.p5Desc2")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               <ul className="projects-modal-skills">
@@ -504,7 +468,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Repositorio
+                  {t("projects.btnRepo")}
                   <i class="bx bxl-github projects-modal-button-icon"></i>
                 </a>
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
@@ -522,9 +486,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(4)}
           />
-          <h3 className="projects-title">Listado de tareas</h3>
+          <h3 className="projects-title">{t("projects.p6CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(4)}>
-            Ver mas{" "}
+            {t("projects.seeMore")}{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -541,18 +505,15 @@ const Projects = () => {
                 onClick={() => toggleTab(0)}
               ></i>
               <h3 className="projects-modal-title">
-                Listado de tareas con React
+                {t("projects.p6ModalTitle")}
               </h3>
               <p className="projects-modal-description">
-                Esta app nos permite hacer un listado de tareas muy bien
-                estilada y con funcionalidades como agregar, eliminar o tachar
-                tareas.
+                {t("projects.p6Desc1")}
                 <br />
-                Este proyecto es parte de un curso de FreeCodeCamp que he
-                realizado.
+                {t("projects.p6Desc2")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               {/*<ul className="projects-modal-skills">
@@ -582,7 +543,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  App
+                  {t("projects.btnApp")}
                   <i class="bx bx-link-external projects-modal-button-icon"></i>
                 </a>
                 <a
@@ -591,7 +552,7 @@ const Projects = () => {
                   href="https://github.com/MarianoVera22/ReactFreeCodeCamp/tree/main/listado%20de%20tareas/listado-de-tareas"
                   target="_blank"
                 >
-                  Repositorio
+                  {t("projects.btnRepo")}
                   <i class="bx bxl-github projects-modal-button-icon"></i>
                 </a>
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
@@ -609,9 +570,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(5)}
           />
-          <h3 className="projects-title">Visión por computadora</h3>
+          <h3 className="projects-title">{t("projects.p7CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(5)}>
-            Ver mas{" "}
+            {t("projects.seeMore")}{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -627,23 +588,16 @@ const Projects = () => {
                 className="uil uil-times projects-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="projects-modal-title">Visión por computadora</h3>
+              <h3 className="projects-modal-title">{t("projects.p7ModalTitle")}</h3>
               <p className="projects-modal-description">
-                Se trata de una serie de ejercicios practicos hechos para la
-                materia electiva Visión por computadora en la carrera de
-                Ingeniería Electrónica.
+                {t("projects.p7Desc1")}
                 <br />
-                En estos proyectos se busca integrar las librerias de OpenCV en
-                Python para manipular imagenes y videos.
+                {t("projects.p7Desc2")}
                 <br />
-                Dentro de estos practicos podemos encontrar practicos sencillos
-                que van subiendo su dificultad para luego formar parte de una
-                agrupación de herramientas de manipulación de imagenes. Tambien,
-                practicos donde a traves de una imagen y relaciones podemos
-                medir objetos desde una imagen con muy buena precisión.
+                {t("projects.p7Desc3")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               <ul className="projects-modal-skills">
@@ -691,7 +645,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  App
+                  {t("projects.btnApp")}
                   <i class="bx bx-link-external projects-modal-button-icon"></i>
                 </a> */}
                 <a
@@ -700,7 +654,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Repositorio
+                  {t("projects.btnRepo")}
                   <i class="bx bxl-github projects-modal-button-icon"></i>
                 </a>
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
@@ -718,9 +672,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(6)}
           />
-          <h3 className="projects-title">Calculadora</h3>
+          <h3 className="projects-title">{t("projects.p8CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(6)}>
-            Ver mas{" "}
+            {t("projects.seeMore")}{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -736,15 +690,14 @@ const Projects = () => {
                 className="uil uil-times projects-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="projects-modal-title">Calculadora con React</h3>
+              <h3 className="projects-modal-title">{t("projects.p8ModalTitle")}</h3>
               <p className="projects-modal-description">
-                Este proyecto se trata de una calculadora totalmente funcional,
-                estilizado y responsive hecha junto a React.
+                {t("projects.p8Desc1")}
                 <br />
-                Esta app es parte de un curso de FreeCodeCamp que he realizado.
+                {t("projects.p8Desc2")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               {/*<ul className="projects-modal-skills">
@@ -774,7 +727,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  App
+                  {t("projects.btnApp")}
                   <i class="bx bx-link-external projects-modal-button-icon"></i>
                 </a>
                 <a
@@ -783,7 +736,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Repositorio
+                  {t("projects.btnRepo")}
                   <i class="bx bxl-github projects-modal-button-icon"></i>
                 </a>
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
@@ -802,9 +755,9 @@ const Projects = () => {
             className="projects-img"
             onClick={() => toggleTab(7)}
           />
-          <h3 className="projects-title">Secuencias de luces</h3>
+          <h3 className="projects-title">{t("projects.p9CardTitle")}</h3>
           <span className="projects-button" onClick={() => toggleTab(7)}>
-            Ver mas{" "}
+            {t("projects.seeMore")}{" "}
             <i className="bx bx-right-arrow-alt projects-button-icon"></i>
           </span>
 
@@ -820,24 +773,18 @@ const Projects = () => {
                 className="uil uil-times projects-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="projects-modal-title">Secuencias de luces</h3>
+              <h3 className="projects-modal-title">{t("projects.p9ModalTitle")}</h3>
               <p className="projects-modal-description">
-                Se trata de un programa en C++ creado para funcionar en una
-                Raspberry Pi 3 junto a una placa experimental hecha por el
-                grupo.
+                {t("projects.p9Desc1")}
                 <br />
-                Este cuenta con secuencias de luces LED y la posibilidad de
-                subir o bajar la velocidad de cada una de las secuencias.
+                {t("projects.p9Desc2")}
                 <br />
-                Se utiliza un protocolo de comunicación en serie para
-                interactuar entre la Raspberry Pi y la placa experimental.
+                {t("projects.p9Desc3")}
                 <br />
-                Este proyecto se trata de un trabajo practico final de la
-                asignatura Técnicas Digitales II de la carrera Ingeniería
-                Electrónica.
+                {t("projects.p9Desc4")}
               </p>
               <p className="projects-modal-skills-title">
-                Herramientas usadas:
+                {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
               <ul className="projects-modal-skills">
@@ -863,7 +810,7 @@ const Projects = () => {
               </ul>
               <ul className="projects-modal-links">
                 {/* <a className='projects-modal-button button-flex' href="">
-                            App
+                            {t("projects.btnApp")}
                         </a> */}
                 <a
                   className="projects-modal-button button-flex"
@@ -871,7 +818,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Repositorio
+                  {t("projects.btnRepo")}
                   <i class="bx bxl-github projects-modal-button-icon"></i>
                 </a>
                 <a
@@ -879,7 +826,7 @@ const Projects = () => {
                   href={informetd2}
                   download=""
                 >
-                  Documento
+                  {t("projects.btnDoc")}
                   <i class="bx bxs-download projects-modal-button-icon"></i>
                 </a>
               </ul>

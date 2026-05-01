@@ -1,9 +1,11 @@
 import React from 'react'
+import { useLanguage } from "../../context/LanguageContext";
 
 const WebDevelopment = () => {
+  const { t } = useLanguage();
   return (
     <div className="skills-content">
-        <h3 className="skills-title">Desarrollo Web</h3>
+        <h3 className="skills-title">{t("skills.webDev")}</h3>
 
         <div className="skills-box">
             <div className="skills-group">

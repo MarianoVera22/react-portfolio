@@ -1,24 +1,27 @@
 import React from "react";
 import "./Footer.css";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="footer-container container">
         <ul className="footer-list">
           <li>
             <a href="#habilidades" className="footer-link">
-              Habilidades
+              {t("footer.skills")}
             </a>
           </li>
           <li>
             <a href="#trayectoria" className="footer-link">
-              Trayectoria
+              {t("footer.career")}
             </a>
           </li>
           <li>
             <a href="#proyectos" className="footer-link">
-              Proyectos
+              {t("footer.projects")}
             </a>
           </li>
         </ul>
@@ -52,7 +55,7 @@ const Footer = () => {
           </a>
         </div>
         <span className="footer-copy">
-          Agradecimientos a Crypticalcoder.
+          {t("footer.thanks")}
           <br />
           &#169; Mariano Vera Causich.
         </span>
