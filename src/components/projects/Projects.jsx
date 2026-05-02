@@ -13,8 +13,7 @@ import informetd2 from "../../assets/ProyectoFinalTDII.pdf";
 import transbordador from "../../assets/Transbordador.jpeg";
 import r4004 from "../../assets/R4004.jpeg";
 import dietetica from "../../assets/dietetica.jpeg";
-
-
+import automatismo from "../../assets/automatizacion2-1.jpg";
 
 
 const Projects = () => {
@@ -29,7 +28,7 @@ const Projects = () => {
       <h2 className="section-title">{t("projects.title")}</h2>
       <span className="section-subtitle">{t("projects.subtitle")}</span>
       <div className="projects-container container grid">
-
+      
         {/* Proyecto 7: Proyecto dietetica*/}
         <div className="projects-card">
           <img
@@ -110,6 +109,88 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        {/* Proyecto 8: Proyecto dietetica*/}
+        <div className="projects-card">
+          <img
+            src={automatismo}
+            alt="Automatismo"
+            className="projects-img"
+            onClick={() => toggleTab(14)}
+          />
+          <h3 className="projects-title">{t("projects.p10CardTitle")}</h3>
+          <span className="projects-button" onClick={() => toggleTab(14)}>
+            {t("projects.seeMore")}{" "}
+            <i className="bx bx-right-arrow-alt projects-button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 14
+                ? "projects-modal active-modal"
+                : "projects-modal"
+            }
+          >
+            <div className="projects-modal-content">
+              <i
+                className="uil uil-times projects-modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+              <h3 className="projects-modal-title">
+                {t("projects.p10ModalTitle")}
+              </h3>
+              <p className="projects-modal-description">
+                {t("projects.p10Desc1")}
+                <br />
+                {t("projects.p10Desc2")}
+                <br />
+                {t("projects.p10Desc3")}
+              </p>
+              <p className="projects-modal-skills-title">
+                {t("projects.toolsUsed")}
+              </p>
+              {/* ICONOS DE HERRAMIENTAS */}
+              <ul className="projects-modal-skills">
+                <div>
+                  <h3 className="skills-name">TIA Portal - </h3>
+                </div>
+                <div>
+                  <h3 className="skills-name">STEP 7 - </h3>
+                </div>
+                <div>
+                  <h3 className="skills-name">STARTER - </h3>
+                </div>
+                {/* <div>
+                  <h3 className="skills-name">EASY Engineering</h3>
+                </div> */}
+                <div>
+                  <h3 className="skills-name">So Move - </h3>
+                </div>
+                <div>
+                  <h3 className="skills-name">Virtual Box </h3>
+                </div>
+              </ul>
+              <ul className="projects-modal-links">
+                {/* <a className='projects-modal-button button-flex' href="https://www.google.com/" target='_blanck'>
+                                App<i class='bx bx-link-external projects-modal-button-icon'></i>
+                            </a> */}
+                <a
+                  className="projects-modal-button button-flex"
+                  href="https://github.com/MarianoVera22/Amapola-App"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("projects.btnRepo")}
+                  <i class="bx bxl-github projects-modal-button-icon"></i>
+                </a>
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                                Documento<i class='bx bxs-download projects-modal-button-icon'></i>
+                            </a> */}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        
 
         {/* Proyecto 6: Cambio de variador R4004*/}
         <div className="projects-card">
@@ -479,7 +560,7 @@ const Projects = () => {
           </div>
         </div>
         {/* Proyecto x: Listado de tareas */}
-        {/*<div className="projects-card">
+        <div className="projects-card">
           <img
             src={listado}
             alt="asd"
@@ -516,7 +597,7 @@ const Projects = () => {
                 {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
-              {/*<ul className="projects-modal-skills">
+              <ul className="projects-modal-skills">
                 <li className="projects-modal-icon">
                   <i class="bx bxl-html5"></i>
                 </li>
@@ -558,10 +639,10 @@ const Projects = () => {
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
                             Documento<i class='bx bxs-download projects-modal-button-icon'></i>
                         </a> */}
-              {/*</ul>
+              </ul>
             </div>
           </div>
-        </div> */}
+        </div> 
         {/* Proyecto 2: Vision por computadora */}
         <div className="projects-card">
           <img

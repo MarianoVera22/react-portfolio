@@ -169,6 +169,16 @@ const translations = {
         "Se utiliza un protocolo de comunicación en serie para interactuar entre la Raspberry Pi y la placa experimental.",
       p9Desc4:
         "Este proyecto se trata de un trabajo practico final de la asignatura Técnicas Digitales II de la carrera Ingeniería Electrónica.",
+
+        // Proyecto 10 - Capacitacion automatismo
+      p10CardTitle: "Programa de Capacitación Técnica",
+      p10ModalTitle: "Formación tecnicos de mantenimiento industrial",
+      p10Desc1:
+        "Creé más de 15 instructivos técnicos estructurados que abarcaron cuatro ejes fundamentales: programación de PLCs (TIA Portal y STEP 7), configuración y diagnóstico de variadores de frecuencia (Scout, Starter, So Move y Easy Engeenering), instalación y gestión de máquinas virtuales (VMWare y Virtual box), e informática aplicada a entornos industriales. Cada guía fue diseñada para ser práctica y autocontenida — redactada de forma que cualquier técnico pudiera seguir los procedimientos de manera autónoma, incluso sin experiencia previa.",
+      p10Desc2:
+        "La capacitación involucró sesiones prácticas a +10 técnicos de mantenimiento, transformando un equipo con exposición técnica mínima en uno capaz de realizar diagnósticos básicos de PLC, configurar variadores y manejar entornos virtualizados. Todo el material fue documentado formalmente e integrado de manera permanente a la base de conocimiento de la empresa, asegurando un impacto duradero más allá de mi paso por la organización.",
+      p10Desc3:
+        "Este proyecto refleja lo que más valoro en la ingeniería: no solo resolver problemas, sino empoderar a otros para que también puedan hacerlo.",
     },
 
     contact: {
@@ -367,6 +377,16 @@ const translations = {
         "A serial communication protocol is used to interact between the Raspberry Pi and the experimental board.",
       p9Desc4:
         "This project is a final practical work of the Digital Techniques II subject in the Electronic Engineering degree.",
+
+       // Project 10 - Automation and informatic
+      p10CardTitle: "Technical Training Program",
+      p10ModalTitle: "Industrial Maintenance Team Upskilling",
+      p10Desc1:
+        "I created over 15 structured instructional guides covering four key areas: PLC programming (TIA Portal and STEP 7), variable frequency drive configuration and diagnostics (Scout, Starter, SoMove, and Easy Engineering), virtual machine setup and management (VMWare and VirtualBox), and IT fundamentals applied to industrial environments. Each guide was designed to be practical and self-contained — written so that any technician could follow the procedures independently, even without prior experience.",
+      p10Desc2:
+        "The training involved hands-on sessions with 10+ maintenance technicians, transforming a team with minimal technical exposure into one capable of performing basic PLC diagnostics, configuring VFDs, and navigating virtualized environments. All instructional materials were formally documented and permanently integrated into the company's knowledge base, ensuring long-term impact beyond my tenure..",
+      p10Desc3:
+        "This project reflects what I value most in engineering: not just solving problems, but empowering others to solve them too.", 
     },
 
     contact: {
