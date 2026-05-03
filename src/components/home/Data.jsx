@@ -1,9 +1,17 @@
 import React from "react";
-import CV from "../../assets/CV_Vera_Causich_Mariano.pdf";
+import CV_ES from "../../assets/CV_Vera_Causich_Mariano.pdf";
+import CV_EN from "../../assets/CV_Vera_Causich_Mariano_EN.pdf";
 import { useLanguage } from "../../context/LanguageContext";
 
 const Data = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+
+  // Selecciona el CV correspondiente al idioma activo
+  const CV = language === "en" ? CV_EN : CV_ES;
+  const CVFilename =
+    language === "en"
+      ? "CV_Vera_Causich_Mariano_EN.pdf"
+      : "CV_Vera_Causich_Mariano.pdf";
 
   return (
     <div className="home_data">
@@ -15,7 +23,7 @@ const Data = () => {
         {t("home.description2")}
       </p>
 
-      <a className="home_button button-flex" href={CV} download="">
+      <a className="home_button button-flex" href={CV} download={CVFilename}>
         {t("home.downloadCV")}
         <i className="bx bxs-download home-button-icon"></i>
       </a>
