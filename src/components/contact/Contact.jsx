@@ -53,7 +53,7 @@ const Contact = () => {
               <i className="bx bxl-whatsapp-square contact-card-icon"></i>
 
               <h3 className="contact-card-title">WhatsApp</h3>
-              <span className="contact-card-data">+543525531247</span>
+              <span className="contact-card-data">+54 3525 531247</span>
 
               <div className="contact-button">{t("contact.contactMe")}</div>
             </a>

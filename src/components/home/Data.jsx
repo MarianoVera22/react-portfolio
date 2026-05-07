@@ -17,10 +17,17 @@ const Data = () => {
     <div className="home_data">
       <h1 className="home_title">Mariano Vera Causich</h1>
       <h3 className="home_subtitle">{t("home.subtitle")}</h3>
+      {/* <h2 className="hero-tagline">
+        Industrial Automation · Software Developer 
+    </h2> */}
       <p className="home_description">
         {t("home.description")}
         <br />
         {t("home.description2")}
+        <br />
+        {t("home.description3")}
+        <br />
+        {t("home.description4")}
       </p>
 
       <a className="home_button button-flex" href={CV} download={CVFilename}>

@@ -17,7 +17,13 @@ const Nav = () => {
 
       <header className="header">
         <nav className="nav container">
-          Mariano
+          {/* Mariano */}
+
+          <div className="brand-container">
+            <div className="logo-mark">MV</div>
+            {/* <span className="brand-name">Mariano Vera Causich</span> */}
+        </div>
+        
           <div className={Toggle ? "nav-menu show-menu" : "nav-menu"}>
             <ul className="nav-list grid">
               <li className="nav-item">

@@ -8,6 +8,15 @@
   align-items: center;
 }
 
+.hero-tagline {
+  font-size: 0.95rem;
+  color: #4A7FA5; /* o el azul de tu paleta */
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
 .home_title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-0-25);

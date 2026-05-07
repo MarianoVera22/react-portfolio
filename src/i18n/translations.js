@@ -14,10 +14,15 @@ const translations = {
     home: {
       subtitle: "Ingeniero Electrónico / Programador",
       description:
-        "Soy ingeniero electrónico especializado en el area de software y programación.",
+        "Ingeniero electrónico apasionado por el desarrollo de software.",
       description2:
-        "A lo largo de mi carrera forme parte de proyectos muy interesantes tanto en grupos de trabajo como de manera individual. En mi trayectoria profesional aprendi a trabajar en equipo desempeñando varios tipos de roles como lider, coordinador y ejecutor. Me motivan los desafios y el aprendizaje continuo. Me considero una persona responsable, autodidacta, honesta y disciplinada.",
-      downloadCV: "Descargar CV",
+        // "A lo largo de mi carrera forme parte de proyectos muy interesantes tanto en grupos de trabajo como de manera individual. En mi trayectoria profesional aprendi a trabajar en equipo desempeñando varios tipos de roles como lider, coordinador y ejecutor. Me motivan los desafios y el aprendizaje continuo. Me considero una persona responsable, autodidacta, honesta y disciplinada."
+        " Me formé de manera autodidacta en programación a lo largo de toda mi carrera, manejando varios lenguajes, junto con tecnologías web y sistemas embebidos.",
+      description3:  
+        "Mi recorrido profesional en la industria me dio algo que pocos developers tienen: experiencia real resolviendo problemas técnicos complejos en entornos exigentes. Trabajé con PLCs, variadores de frecuencia y sistemas automatizados, lo que me dio una comprensión profunda de cómo el software interactúa con el mundo físico.",
+      description4:  
+        " Me motiva construir software que resuelva problemas reales: un dashboard que transforme datos en decisiones, firmware para un dispositivo o la automatización de un proceso productivo. Disfruto del proceso de aprender, diseñar y crear.",
+        downloadCV: "Descargar CV",
     },
 
     skills: {
@@ -223,10 +228,14 @@ const translations = {
     home: {
       subtitle: "Electronic Engineer / Developer",
       description:
-        "I am an electronic engineer specialized in software and programming.",
+        "Electronic engineer passionate about software development.",
       description2:
-        "Throughout my career I have been part of very interesting projects, both in teams and individually. In my professional trajectory I learned to work in teams playing different roles such as leader, coordinator and executor. I am motivated by challenges and continuous learning. I consider myself a responsible, self-taught, honest and disciplined person.",
-      downloadCV: "Download CV",
+        "I have been self-teaching programming throughout my entire career, working with multiple languages, along with web technologies and embedded systems.",
+      description3:  
+        "My professional journey in industry gave me something few developers have: real-world experience solving complex technical problems in demanding environments. I worked with PLCs, variable frequency drives, and automated systems, which gave me a deep understanding of how software interacts with the physical world.",
+      description4:  
+        " I am driven by building software that solves real problems: a dashboard that turns data into decisions, firmware for a device, or the automation of a production process. I enjoy the process of learning, designing, and creating.",
+        downloadCV: "Download CV",
     },
 
     skills: {
