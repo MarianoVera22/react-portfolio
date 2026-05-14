@@ -11,7 +11,7 @@ import tesis from "../../assets/Sistema-completo-real.jpg";
 import informetesis from "../../assets/TesisCampetellaVera.pdf";
 import informetd2 from "../../assets/ProyectoFinalTDII.pdf";
 import transbordador from "../../assets/Transbordador.jpeg";
-import r4004 from "../../assets/R4004.jpeg";
+import r4004 from "../../assets/Gemini_Generated_Image_fflh6vfflh6vfflh.png";
 import dietetica from "../../assets/dietetica.jpeg";
 import automatismo from "../../assets/automatizacion2-1.jpg";
 
@@ -188,9 +188,7 @@ const Projects = () => {
               </ul>
             </div>
           </div>
-        </div>
-
-        
+        </div>  
 
         {/* Proyecto 6: Cambio de variador R4004*/}
         <div className="projects-card">

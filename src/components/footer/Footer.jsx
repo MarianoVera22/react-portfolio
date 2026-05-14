@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
         <span className="footer-copy">
           {/* {t("footer.thanks")} */}
-          <br />
+          {/* <br /> */}
           &#169; Mariano Vera Causich.
         </span>
       </div>
