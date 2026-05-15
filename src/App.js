@@ -7,6 +7,7 @@ import Skills from "./components/skills/Skills.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import Chatbot from "./components/chatbot/Chatbot.jsx";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       </main>
 
       <Footer />
+      <Chatbot />
     </>
   );
 }

@@ -214,6 +214,30 @@ const translations = {
       es: "Español",
       en: "English",
     },
+
+    chatbot: {
+      openLabel: "Abrir chat de ayuda",
+      closeLabel: "Cerrar chat",
+      headerTitle: "Asistente del portfolio",
+      headerSubtitle: "Respuestas rápidas sobre Mariano",
+      welcome:
+        "¡Hola! Soy un asistente automático. Elegí una pregunta para empezar:",
+      backToMenu: "Hacer otra pregunta",
+      // Preguntas
+      q1: "¿Quién es Mariano?",
+      q2: "¿Qué tecnologías maneja?",
+      q3: "¿Tiene experiencia en automatización industrial?",
+      q4: "¿Cómo puedo contactarlo?",
+      q5: "¿Está disponible para nuevos proyectos?",
+      q6: "¿Dónde está ubicado?",
+      // Respuestas
+      a1: "Mariano es ingeniero electrónico con experiencia en automatización industrial, programación de PLCs y desarrollo de software. Tiene formación universitaria en Ingeniería Electrónica (UTN Córdoba) y se ha especializado de manera autodidacta en desarrollo web y programación.",
+      a2: "En automatización: Siemens TIA Portal, Step 7, MicroWin, Profinet, lógica Ladder/AWL/SCL. En programación: C/C++, C#, Python, JavaScript, React, Angular, SQL. También maneja herramientas como Git, Docker, AutoCAD, KiCAD y Matlab.",
+      a3: "Sí, es su área principal. Trabaja actualmente como Jefe de mantenimiento eléctrico en Bagley (Grupo Arcor) y tiene experiencia previa en Cartocor y Fantini Ladrillos Cerámicos. Realizó proyectos como migración de variadores Schneider y robustecimiento de lógicas PLC en líneas industriales.",
+      a4: "Podés contactarlo por LinkedIn (marianoveracausich), WhatsApp (+54 3525 531247), Telegram (@Marianovera22) o por el formulario al final de esta página. También respondes a marianoveracausich@gmail.com.",
+      a5: "Sí, está abierto a evaluar nuevas oportunidades y colaboraciones. Lo mejor es escribirle directamente por LinkedIn o usar el formulario de contacto al final de la página.",
+      a6: "Reside en Colonia Caroya, provincia de Córdoba, Argentina. Trabaja en Córdoba capital y zona, y también acepta proyectos remotos.",
+    },
   },
 
   en: {
@@ -425,6 +449,30 @@ const translations = {
       switchTo: "Switch language",
       es: "Español",
       en: "English",
+    },
+
+    chatbot: {
+      openLabel: "Open help chat",
+      closeLabel: "Close chat",
+      headerTitle: "Portfolio assistant",
+      headerSubtitle: "Quick answers about Mariano",
+      welcome:
+        "Hi! I'm an automated assistant. Pick a question to get started:",
+      backToMenu: "Ask another question",
+      // Questions
+      q1: "Who is Mariano?",
+      q2: "What technologies does he work with?",
+      q3: "Does he have industrial automation experience?",
+      q4: "How can I contact him?",
+      q5: "Is he available for new projects?",
+      q6: "Where is he located?",
+      // Answers
+      a1: "Mariano is an electronic engineer with experience in industrial automation, PLC programming and software development. He holds a degree in Electronic Engineering from UTN Córdoba and is self-taught in web development.",
+      a2: "Automation: Siemens TIA Portal, Step 7, MicroWin, Profinet, Ladder/AWL/SCL logic. Programming: C/C++, C#, Python, JavaScript, React, Angular, SQL. He also works with Git, Docker, AutoCAD, KiCAD and Matlab.",
+      a3: "Yes, it's his main field. He currently works as Head of Electrical Maintenance at Bagley (Grupo Arcor) and has previous experience at Cartocor and Fantini Ladrillos Cerámicos. He has led projects such as Schneider drive migrations and PLC logic hardening on industrial production lines.",
+      a4: "You can reach him via LinkedIn (marianoveracausich), WhatsApp (+54 3525 531247), Telegram (@Marianovera22) or through the contact form at the bottom of this page. He also replies at marianoveracausich@gmail.com.",
+      a5: "Yes, he's open to evaluating new opportunities and collaborations. The best way to reach out is directly through LinkedIn or via the contact form at the bottom of the page.",
+      a6: "He's based in Colonia Caroya, Córdoba, Argentina. He works in Córdoba city and surrounding area, and also takes on remote projects.",
     },
   },
 };

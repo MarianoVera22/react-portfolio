@@ -2,6 +2,7 @@ import React from "react";
 import CV_ES from "../../assets/CV_Vera_Causich_Mariano.pdf";
 import CV_EN from "../../assets/CV_Vera_Causich_Mariano_EN.pdf";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 
 const Data = () => {
   const { language, t } = useLanguage();
@@ -12,6 +13,10 @@ const Data = () => {
     language === "en"
       ? "CV_Vera_Causich_Mariano_EN.pdf"
       : "CV_Vera_Causich_Mariano.pdf";
+
+  const handleCVDownload = () => {
+    trackEvent("cv_download", { language });
+  };
 
   return (
     <div className="home_data">
@@ -30,7 +35,12 @@ const Data = () => {
         {t("home.description4")}
       </p>
 
-      <a className="home_button button-flex" href={CV} download={CVFilename}>
+      <a
+        className="home_button button-flex"
+        href={CV}
+        download={CVFilename}
+        onClick={handleCVDownload}
+      >
         {t("home.downloadCV")}
         <i className="bx bxs-download home-button-icon"></i>
       </a>

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import translations from "../i18n/translations";
+import { trackEvent } from "../utils/analytics";
 
 const LanguageContext = createContext();
 
@@ -50,11 +51,16 @@ export const LanguageProvider = ({ children }) => {
   const setLanguage = (lang) => {
     if (SUPPORTED_LANGUAGES.includes(lang)) {
       setLanguageState(lang);
+      trackEvent("language_change", { language: lang });
     }
   };
 
   const toggleLanguage = () => {
-    setLanguageState((prev) => (prev === "es" ? "en" : "es"));
+    setLanguageState((prev) => {
+      const next = prev === "es" ? "en" : "es";
+      trackEvent("language_change", { language: next });
+      return next;
+    });
   };
 
   // Función t() - acepta claves tipo "home.title" o "projects.p1Desc1"

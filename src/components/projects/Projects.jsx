@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 import aspnet from "../../assets/csharp-net.png";
 import listado from "../../assets/listadodetareas.png";
 import calculadora from "../../assets/calculadora.png";
@@ -22,6 +23,10 @@ const Projects = () => {
 
   const toggleTab = (index) => {
     setToggleState(index);
+    // Track solo al abrir un modal (no al cerrar)
+    if (index > 0) {
+      trackEvent("project_view", { project_id: index });
+    }
   };
   return (
     <section className="projects section" id="proyectos">
