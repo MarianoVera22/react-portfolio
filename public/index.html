@@ -19,5 +19,18 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!--
+      Form fantasma para Netlify Forms.
+      Netlify escanea el HTML estatico del build buscando forms con data-netlify="true".
+      Como el form real vive en React (renderizado en runtime), agregamos este placeholder
+      para que Netlify lo detecte. El form real apunta a /?form-name=contact via fetch.
+      No es visible para el usuario (display: none).
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

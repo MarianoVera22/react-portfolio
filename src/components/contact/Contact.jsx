@@ -1,24 +1,73 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import "./Contact.css";
-import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
+
+// Helper: convierte un objeto a application/x-www-form-urlencoded
+// (formato que espera Netlify Forms)
+const encode = (data) =>
+  Object.keys(data)
+    .map(
+      (key) =>
+        encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+    )
+    .join("&");
 
 const Contact = () => {
-  const form = useRef();
   const { t } = useLanguage();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    "bot-field": "", // honeypot
+  });
+  const [isSending, setIsSending] = useState(false);
 
-  const notify = () => toast.success(t("contact.toastSent"));
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const sendEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Enviando formulario...");
 
-    emailjs.sendForm("service_5pfooxj", "template_dqmk3kd", form.current, {
-      publicKey: "Hmmm_6nHhA0ze_2F4",
-    });
+    // Si el honeypot tiene contenido, es un bot. Cortamos sin avisar.
+    if (formData["bot-field"]) {
+      return;
+    }
 
-    e.target.reset();
+    setIsSending(true);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          ...formData,
+        }),
+      });
+
+      if (response.ok) {
+        toast.success(t("contact.toastSent"));
+        trackEvent("contact_form_submit", { status: "success" });
+        // Reset
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+          "bot-field": "",
+        });
+      } else {
+        throw new Error(`HTTP ${response.status}`);
+      }
+    } catch (error) {
+      toast.error(t("contact.toastError"));
+      trackEvent("contact_form_submit", { status: "error" });
+      console.error("Error enviando formulario:", error);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -76,49 +125,84 @@ const Contact = () => {
 
         <div className="contact-content-form">
           <h3 className="contact-title">{t("contact.viaEmail")}</h3>
-          <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <form
+            className="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            {/* Campo oculto requerido por Netlify para identificar el form */}
+            <input type="hidden" name="form-name" value="contact" />
+
+            {/* Honeypot anti-spam: oculto, si un bot lo rellena descartamos */}
+            <p className="contact-honeypot">
+              <label>
+                Don't fill this out:{" "}
+                <input
+                  name="bot-field"
+                  value={formData["bot-field"]}
+                  onChange={handleChange}
+                />
+              </label>
+            </p>
+
             <div className="contact-form-div">
-              <label htmlFor="" className="contact-form-tag">
+              <label htmlFor="contact-name" className="contact-form-tag">
                 {t("contact.formName")}
               </label>
               <input
+                id="contact-name"
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="contact-form-input"
                 placeholder={t("contact.placeholderName")}
+                required
               />
             </div>
 
             <div className="contact-form-div">
-              <label htmlFor="" className="contact-form-tag">
+              <label htmlFor="contact-email" className="contact-form-tag">
                 {t("contact.formEmail")}
               </label>
               <input
+                id="contact-email"
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="contact-form-input"
                 placeholder={t("contact.placeholderEmail")}
+                required
               />
             </div>
 
-            <div className="contact-form-div  contact-form-area">
-              <label htmlFor="" className="contact-form-tag">
+            <div className="contact-form-div contact-form-area">
+              <label htmlFor="contact-message" className="contact-form-tag">
                 {t("contact.formMessage")}
               </label>
               <textarea
-                name="project"
+                id="contact-message"
+                name="message"
                 cols="30"
                 rows="10"
+                value={formData.message}
+                onChange={handleChange}
                 className="contact-form-input"
                 placeholder={t("contact.placeholderMessage")}
+                required
               ></textarea>
             </div>
 
             <button
+              type="submit"
               className="contact-button-email button-flex"
-              onClick={notify}
+              disabled={isSending}
             >
-              {t("contact.sendBtn")}
+              {isSending ? t("contact.sending") : t("contact.sendBtn")}
               <i className="bx bxs-send contact-button-icon"></i>
             </button>
             <Toaster position="bottom-center" reverseOrder={false} />

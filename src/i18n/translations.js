@@ -199,7 +199,9 @@ const translations = {
       placeholderEmail: "Inserta tu email",
       placeholderMessage: "Escribe tu mensaje",
       sendBtn: "Enviar mensaje",
-      toastSent: "Enviado!",
+      sending: "Enviando...",
+      toastSent: "¡Mensaje enviado!",
+      toastError: "Error al enviar. Probá de nuevo o contactame por LinkedIn.",
     },
 
     footer: {
@@ -435,7 +437,9 @@ const translations = {
       placeholderEmail: "Enter your email",
       placeholderMessage: "Write your message",
       sendBtn: "Send message",
-      toastSent: "Sent!",
+      sending: "Sending...",
+      toastSent: "Message sent!",
+      toastError: "Sending failed. Try again or reach me via LinkedIn.",
     },
 
     footer: {

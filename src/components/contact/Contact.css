@@ -67,11 +67,29 @@
   font-weight: var(--font-medium);
   border-radius: 10px;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .contact-button-email:hover {
   /* box-shadow: inset 0 0 0 3px #4c5c689f;*/
   background-color: #1985a1;
+}
+
+.contact-button-email:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background-color: #46494c;
+}
+
+/* Honeypot anti-spam: invisible para usuarios, visible para bots */
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .contact-button-icon {
