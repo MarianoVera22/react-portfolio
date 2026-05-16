@@ -35,15 +35,41 @@ const Data = () => {
         {t("home.description4")}
       </p>
 
-      <a
-        className="home_button button-flex"
-        href={CV}
-        download={CVFilename}
-        onClick={handleCVDownload}
-      >
-        {t("home.downloadCV")}
-        <i className="bx bxs-download home-button-icon"></i>
-      </a>
+      <div className="home_buttons">
+        <a
+          className="home_button button-flex"
+          href={CV}
+          download={CVFilename}
+          onClick={handleCVDownload}
+        >
+          {t("home.downloadCV")}
+          <i className="bx bxs-download home-button-icon"></i>
+        </a>
+
+        <div className="home_socials">
+          <a
+            href="https://github.com/MarianoVera22"
+            className="home-social-icon"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            onClick={() => trackEvent("social_click", { network: "github" })}
+          >
+            <i className="bx bxl-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/marianoveracausich/"
+            className="home-social-icon"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            onClick={() => trackEvent("social_click", { network: "linkedin" })}
+          >
+            <i className="bx bxl-linkedin-square"></i>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

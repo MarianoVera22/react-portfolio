@@ -39,11 +39,45 @@
   font-weight: var(--font-medium);
   border-radius: 10px;
   transition-duration: 0.4s;
+  /* Altura fija para que matchee exacto con los iconos sociales */
+  height: 42px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
 }
 
 .home_button:hover {
   /* box-shadow: inset 0 0 0 3px #4c5c689f;*/
   background-color: #1985a1;
+}
+
+/* === Wrapper de botón CV + iconos sociales === */
+.home_buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.home_socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.home_socials .home-social-icon {
+  margin: 0;
+  font-size: 1.4rem;
+  /* Misma altura que el botón CV */
+  height: 42px;
+  width: 42px;
+  padding: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 /* .home_button:active {

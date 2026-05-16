@@ -7,11 +7,14 @@ import Skills from "./components/skills/Skills.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Footer from "./components/footer/Footer.jsx";
-import Chatbot from "./components/chatbot/Chatbot.jsx";
+// import Chatbot from "./components/chatbot/Chatbot.jsx"; // Deshabilitado temporalmente - se reactivará con otro formato
+import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
+import ScrollProgress from "./components/scrollProgress/ScrollProgress.jsx";
 
 const App = () => {
   return (
     <>
+      <ScrollProgress />
       <Nav />
 
       <main className="main">
@@ -23,7 +26,8 @@ const App = () => {
       </main>
 
       <Footer />
-      <Chatbot />
+      {/* <Chatbot /> */}
+      <ScrollToTop />
     </>
   );
 }
