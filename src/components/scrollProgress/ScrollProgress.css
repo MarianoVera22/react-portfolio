@@ -1,0 +1,23 @@
+/* === Scroll progress bar ===
+   Barra fina de 3px arriba del todo. Color teal del portfolio.
+   z-index alto para quedar siempre visible.
+*/
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: transparent;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background-color: #1985a1;
+  /* will-change para mejorar performance del repaint */
+  will-change: width;
+  transition: width 0.05s linear;
+}

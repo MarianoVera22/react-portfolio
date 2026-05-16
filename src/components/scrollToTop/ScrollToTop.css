@@ -1,0 +1,54 @@
+/* === Botón scroll to top ===
+   Posicionado abajo a la IZQUIERDA para no colisionar con el chatbot
+   (que está abajo a la derecha). Mismo color teal del portfolio.
+*/
+
+.scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #1985a1;
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(25, 133, 161, 0.35);
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.25s ease,
+    visibility 0.3s;
+}
+
+.scroll-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background-color: #146d85;
+  transform: translateY(-2px);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll-top {
+    bottom: 5rem; /* arriba del nav-bottom mobile */
+    left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+  }
+}
