@@ -122,6 +122,50 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   z-index: 1;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form-input:focus {
+  border-color: #1985a1;
+}
+
+/* === Estado de error === */
+.contact-form-input--error,
+.contact-form-input--error:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.12);
+}
+
+.contact-form-error {
+  position: absolute;
+  bottom: -1.4rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  color: #d32f2f;
+  z-index: 2;
+  /* Animacion sutil de entrada */
+  animation: form-error-in 0.2s ease;
+}
+
+/* En el textarea (area mas alta), el error va mas abajo */
+.contact-form-area .contact-form-error {
+  bottom: -1.4rem;
+}
+
+@keyframes form-error-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Espacio extra abajo del form-div cuando tiene error para que no se solape con el siguiente campo */
+.contact-form-div:has(.contact-form-error) {
+  margin-bottom: calc(var(--mb-2) + 0.6rem);
 }
 
 .contact-form-tag {

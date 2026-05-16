@@ -202,6 +202,12 @@ const translations = {
       sending: "Enviando...",
       toastSent: "¡Mensaje enviado!",
       toastError: "Error al enviar. Probá de nuevo o contactame por LinkedIn.",
+      errorNameRequired: "Ingresá tu nombre",
+      errorNameShort: "El nombre es demasiado corto",
+      errorEmailRequired: "Ingresá tu email",
+      errorEmailInvalid: "El email no es válido",
+      errorMessageRequired: "Escribí un mensaje",
+      errorMessageShort: "El mensaje es demasiado corto (mínimo 10 caracteres)",
     },
 
     footer: {
@@ -440,6 +446,12 @@ const translations = {
       sending: "Sending...",
       toastSent: "Message sent!",
       toastError: "Sending failed. Try again or reach me via LinkedIn.",
+      errorNameRequired: "Please enter your name",
+      errorNameShort: "Your name is too short",
+      errorEmailRequired: "Please enter your email",
+      errorEmailInvalid: "Email is not valid",
+      errorMessageRequired: "Please write a message",
+      errorMessageShort: "Message is too short (minimum 10 characters)",
     },
 
     footer: {

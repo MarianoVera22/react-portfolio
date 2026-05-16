@@ -14,25 +14,97 @@ const encode = (data) =>
     )
     .join("&");
 
+// Regex de email robusto (RFC 5322 simplificado)
+const EMAIL_REGEX =
+  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+// Reglas de longitud minima
+const MIN_NAME_LENGTH = 2;
+const MIN_MESSAGE_LENGTH = 10;
+
 const Contact = () => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    "bot-field": "", // honeypot
+    "bot-field": "",
   });
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
   const [isSending, setIsSending] = useState(false);
 
+  /**
+   * Valida un campo individual y devuelve la clave de error o null si esta OK.
+   * Recibe la clave del campo y opcionalmente un valor (si no se pasa usa formData).
+   */
+  const validateField = (field, value) => {
+    const val = (value !== undefined ? value : formData[field]).trim();
+
+    switch (field) {
+      case "name":
+        if (!val) return "errorNameRequired";
+        if (val.length < MIN_NAME_LENGTH) return "errorNameShort";
+        return null;
+
+      case "email":
+        if (!val) return "errorEmailRequired";
+        if (!EMAIL_REGEX.test(val)) return "errorEmailInvalid";
+        return null;
+
+      case "message":
+        if (!val) return "errorMessageRequired";
+        if (val.length < MIN_MESSAGE_LENGTH) return "errorMessageShort";
+        return null;
+
+      default:
+        return null;
+    }
+  };
+
+  /**
+   * Valida el form completo y actualiza errors. Devuelve true si todo OK.
+   */
+  const validateAll = () => {
+    const newErrors = {};
+    ["name", "email", "message"].forEach((field) => {
+      const err = validateField(field);
+      if (err) newErrors[field] = err;
+    });
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+    // Si el campo ya fue tocado (blurreado), revalidamos en vivo
+    if (touched[name]) {
+      const err = validateField(name, value);
+      setErrors((prev) => ({ ...prev, [name]: err }));
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched((prev) => ({ ...prev, [name]: true }));
+    const err = validateField(name);
+    setErrors((prev) => ({ ...prev, [name]: err }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Si el honeypot tiene contenido, es un bot. Cortamos sin avisar.
+    // Honeypot anti-spam: si tiene contenido, es bot
     if (formData["bot-field"]) {
+      return;
+    }
+
+    // Marcamos todos los campos como tocados para mostrar errores
+    setTouched({ name: true, email: true, message: true });
+
+    if (!validateAll()) {
       return;
     }
 
@@ -51,13 +123,14 @@ const Contact = () => {
       if (response.ok) {
         toast.success(t("contact.toastSent"));
         trackEvent("contact_form_submit", { status: "success" });
-        // Reset
         setFormData({
           name: "",
           email: "",
           message: "",
           "bot-field": "",
         });
+        setTouched({});
+        setErrors({});
       } else {
         throw new Error(`HTTP ${response.status}`);
       }
@@ -69,6 +142,10 @@ const Contact = () => {
       setIsSending(false);
     }
   };
+
+  // Helper para clase + mensaje de error en cada campo
+  const getFieldClass = (field) =>
+    `contact-form-input ${errors[field] ? "contact-form-input--error" : ""}`;
 
   return (
     <section className="contact section" id="contacto">
@@ -132,11 +209,10 @@ const Contact = () => {
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
+            noValidate
           >
-            {/* Campo oculto requerido por Netlify para identificar el form */}
             <input type="hidden" name="form-name" value="contact" />
 
-            {/* Honeypot anti-spam: oculto, si un bot lo rellena descartamos */}
             <p className="contact-honeypot">
               <label>
                 Don't fill this out:{" "}
@@ -158,10 +234,21 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="contact-form-input"
+                onBlur={handleBlur}
+                className={getFieldClass("name")}
                 placeholder={t("contact.placeholderName")}
-                required
+                aria-invalid={errors.name ? "true" : "false"}
+                aria-describedby={errors.name ? "contact-name-error" : undefined}
               />
+              {errors.name && (
+                <span
+                  id="contact-name-error"
+                  className="contact-form-error"
+                  role="alert"
+                >
+                  {t(`contact.${errors.name}`)}
+                </span>
+              )}
             </div>
 
             <div className="contact-form-div">
@@ -174,10 +261,23 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="contact-form-input"
+                onBlur={handleBlur}
+                className={getFieldClass("email")}
                 placeholder={t("contact.placeholderEmail")}
-                required
+                aria-invalid={errors.email ? "true" : "false"}
+                aria-describedby={
+                  errors.email ? "contact-email-error" : undefined
+                }
               />
+              {errors.email && (
+                <span
+                  id="contact-email-error"
+                  className="contact-form-error"
+                  role="alert"
+                >
+                  {t(`contact.${errors.email}`)}
+                </span>
+              )}
             </div>
 
             <div className="contact-form-div contact-form-area">
@@ -191,10 +291,23 @@ const Contact = () => {
                 rows="10"
                 value={formData.message}
                 onChange={handleChange}
-                className="contact-form-input"
+                onBlur={handleBlur}
+                className={getFieldClass("message")}
                 placeholder={t("contact.placeholderMessage")}
-                required
+                aria-invalid={errors.message ? "true" : "false"}
+                aria-describedby={
+                  errors.message ? "contact-message-error" : undefined
+                }
               ></textarea>
+              {errors.message && (
+                <span
+                  id="contact-message-error"
+                  className="contact-form-error"
+                  role="alert"
+                >
+                  {t(`contact.${errors.message}`)}
+                </span>
+              )}
             </div>
 
             <button

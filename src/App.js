@@ -10,10 +10,12 @@ import Footer from "./components/footer/Footer.jsx";
 // import Chatbot from "./components/chatbot/Chatbot.jsx"; // Deshabilitado temporalmente - se reactivará con otro formato
 import ScrollToTop from "./components/scrollToTop/ScrollToTop.jsx";
 import ScrollProgress from "./components/scrollProgress/ScrollProgress.jsx";
+import Splash from "./components/splash/Splash.jsx";
 
 const App = () => {
   return (
     <>
+      <Splash />
       <ScrollProgress />
       <Nav />
 
