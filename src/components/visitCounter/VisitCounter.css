@@ -1,18 +1,19 @@
 /* === VisitCounter ===
-   Display discreto en el footer, usando la imagen SVG oficial de GoatCounter.
-   La imagen SVG no tiene problemas de CORS porque viene por <img> y no fetch.
+   Mismo look que los social icons y copyright del footer.
+   El numero se renderiza como texto normal (no SVG embebido),
+   asi hereda la tipografia Jost y el color del footer.
 */
 
 .visit-counter {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
+  margin-top: 1rem;
   font-size: var(--smaller-font-size);
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.02em;
-  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   transition: color 0.2s ease;
+  letter-spacing: 0.02em;
 }
 
 .visit-counter:hover {
@@ -20,20 +21,41 @@
 }
 
 .visit-counter i {
-  font-size: 0.95rem;
+  font-size: 1rem;
   display: inline-flex;
   align-items: center;
+  opacity: 0.85;
 }
 
-.visit-counter-svg {
-  /* La imagen SVG de GoatCounter viene en color rosa/magenta por defecto.
-     La invertimos para que se vea blanca sobre el fondo oscuro del footer. */
-  filter: invert(1) brightness(1.4) saturate(0);
-  height: 1.05rem;
-  width: auto;
-  vertical-align: middle;
+.visit-counter-number {
+  font-weight: var(--font-medium);
+  color: rgba(255, 255, 255, 0.85);
+  font-variant-numeric: tabular-nums;
 }
 
 .visit-counter-label {
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+/* === Estado loading: skeleton sutil pulsante === */
+.visit-counter--loading {
+  cursor: default;
+}
+
+.visit-counter-skeleton {
+  opacity: 0.45;
+  animation: visit-counter-pulse 1.4s ease-in-out infinite;
+  letter-spacing: 1px;
+}
+
+@keyframes visit-counter-pulse {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.65; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visit-counter-skeleton {
+    animation: none;
+    opacity: 0.5;
+  }
 }
