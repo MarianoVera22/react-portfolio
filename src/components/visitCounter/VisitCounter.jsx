@@ -6,7 +6,7 @@ import "./VisitCounter.css";
 // Reemplazar con el subdominio que elegiste en GoatCounter.
 // Ej: si tu URL es https://marianovera.goatcounter.com → "marianovera"
 // Si lo dejas vacio, el componente queda en modo "placeholder" sin hacer fetch.
-const GOATCOUNTER_CODE = "marianoveracausich";
+const GOATCOUNTER_CODE = "marianovera";
 
 const VisitCounter = () => {
   const { t } = useLanguage();
