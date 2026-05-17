@@ -5,6 +5,7 @@ const translations = {
   es: {
     nav: {
       home: "Inicio",
+      about: "Sobre mí",
       skills: "Habilidades",
       career: "Trayectoria",
       projects: "Proyectos",
@@ -23,6 +24,37 @@ const translations = {
       description4:  
         " Me motiva construir software que resuelva problemas reales: un dashboard que transforme datos en decisiones, firmware para un dispositivo o la automatización de un proceso productivo. Disfruto del proceso de aprender, diseñar y crear.",
         downloadCV: "Descargar CV",
+    },
+
+    about: {
+      title: "Sobre mí",
+      subtitle: "Datos personales y profesionales",
+      languagesTitle: "Idiomas",
+      langSpanish: "Español",
+      langSpanishLevel: "Nativo",
+      langEnglish: "Inglés",
+      langEnglishLevel: "Avanzado",
+      langItalian: "Italiano",
+      langItalianLevel: "Básico",
+      certificatesTitle: "Certificados",
+      interestsTitle: "Intereses",
+      softSkillsTitle: "Soft skills",
+      interests: {
+        software: "Software",
+        programming: "Programación",
+        robotics: "Robótica",
+        firmware: "Firmware",
+        it: "IT",
+        automation: "Automatización",
+        hardware: "Hardware",
+      },
+      softSkills: {
+        responsibility: "Responsabilidad",
+        teamwork: "Trabajo en equipo",
+        communication: "Comunicación",
+        leadership: "Liderazgo",
+        proactivity: "Proactividad",
+      },
     },
 
     skills: {
@@ -215,6 +247,8 @@ const translations = {
       career: "Trayectoria",
       projects: "Proyectos",
       thanks: "Agradecimientos a Crypticalcoder.",
+      visits: "visitas únicas",
+      visitsTooltip: "Visitantes únicos acumulados",
     },
 
     lang: {
@@ -251,6 +285,7 @@ const translations = {
   en: {
     nav: {
       home: "Home",
+      about: "About",
       skills: "Skills",
       career: "Career",
       projects: "Projects",
@@ -268,6 +303,37 @@ const translations = {
       description4:  
         " I am driven by building software that solves real problems: a dashboard that turns data into decisions, firmware for a device, or the automation of a production process. I enjoy the process of learning, designing, and creating.",
         downloadCV: "Download CV",
+    },
+
+    about: {
+      title: "About me",
+      subtitle: "Personal and professional info",
+      languagesTitle: "Languages",
+      langSpanish: "Spanish",
+      langSpanishLevel: "Native",
+      langEnglish: "English",
+      langEnglishLevel: "Advanced",
+      langItalian: "Italian",
+      langItalianLevel: "Basic",
+      certificatesTitle: "Certificates",
+      interestsTitle: "Interests",
+      softSkillsTitle: "Soft skills",
+      interests: {
+        software: "Software",
+        programming: "Programming",
+        robotics: "Robotics",
+        firmware: "Firmware",
+        it: "IT",
+        automation: "Automation",
+        hardware: "Hardware",
+      },
+      softSkills: {
+        responsibility: "Responsibility",
+        teamwork: "Teamwork",
+        communication: "Communication",
+        leadership: "Leadership",
+        proactivity: "Proactivity",
+      },
     },
 
     skills: {
@@ -459,6 +525,8 @@ const translations = {
       career: "Career",
       projects: "Projects",
       thanks: "Thanks to Crypticalcoder.",
+      visits: "unique visits",
+      visitsTooltip: "Total unique visitors",
     },
 
     lang: {

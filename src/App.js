@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Nav from './components/nav/Nav.jsx';
 import Home from './components/home/Home.jsx';
+import About from "./components/about/About.jsx";
 import Career from "./components/career/Career.jsx";
 import Skills from "./components/skills/Skills.jsx";
 import Projects from "./components/projects/Projects.jsx";
@@ -21,6 +22,7 @@ const App = () => {
 
       <main className="main">
         <Home />
+        <About />
         <Skills />
         <Career />
         <Projects />

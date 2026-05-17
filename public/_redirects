@@ -1,0 +1,6 @@
+# Netlify redirects
+# Sirve 404.html para rutas que realmente no existen.
+# (Como el portfolio es de una sola pagina con anchors, no necesitamos
+#  catchall a index.html — preferimos mostrar el 404 si alguien escribe mal una URL)
+
+/old-portfolio    /    301

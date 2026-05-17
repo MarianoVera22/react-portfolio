@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { useLanguage } from "../../context/LanguageContext";
+import VisitCounter from "../visitCounter/VisitCounter";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -59,6 +60,7 @@ const Footer = () => {
           {/* <br /> */}
           &#169; Mariano Vera Causich.
         </span>
+        <VisitCounter />
       </div>
     </footer>
   );

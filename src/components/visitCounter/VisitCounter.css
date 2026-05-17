@@ -1,0 +1,47 @@
+/* === VisitCounter ===
+   Display discreto en el footer: icono + numero + label.
+   Color blanco al 60% para que no compita con los links sociales.
+*/
+
+.visit-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--smaller-font-size);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.02em;
+  margin-top: 0.5rem;
+}
+
+.visit-counter i {
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.visit-counter-number {
+  font-weight: var(--font-medium);
+  color: rgba(255, 255, 255, 0.85);
+  font-variant-numeric: tabular-nums;
+}
+
+.visit-counter-label {
+  opacity: 0.85;
+}
+
+/* Estado loading: skeleton sutil pulsante */
+.visit-counter--loading .visit-counter-skeleton {
+  opacity: 0.5;
+  animation: visit-counter-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes visit-counter-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visit-counter--loading .visit-counter-skeleton {
+    animation: none;
+  }
+}
