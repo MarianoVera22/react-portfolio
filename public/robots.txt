@@ -1,0 +1,9 @@
+# robots.txt para Mariano Vera Causich Portfolio
+# https://marianoveracausich.netlify.app/
+
+# Permitir a todos los bots indexar el sitio entero
+User-agent: *
+Allow: /
+
+# Ubicacion del sitemap
+Sitemap: https://marianoveracausich.netlify.app/sitemap.xml
