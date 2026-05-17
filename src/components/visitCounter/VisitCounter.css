@@ -26,10 +26,10 @@
 }
 
 .visit-counter-svg {
-  /* La imagen SVG de GoatCounter viene en color oscuro por defecto;
-     usamos un filtro para invertirla y que matchee el blanco del footer */
-  filter: invert(1) brightness(1.1);
-  height: 0.9rem;
+  /* La imagen SVG de GoatCounter viene en color rosa/magenta por defecto.
+     La invertimos para que se vea blanca sobre el fondo oscuro del footer. */
+  filter: invert(1) brightness(1.4) saturate(0);
+  height: 1.05rem;
   width: auto;
   vertical-align: middle;
 }

@@ -15,7 +15,37 @@ const About = () => {
 
       <div className="about-container container grid">
 
-        {/* Card 1 - Idiomas */}
+        {/* Card 1 - Intereses */}
+        <div className="about-content">
+          <div className="about-icon-wrap">
+            <i className="bx bx-bulb about-icon"></i>
+          </div>
+          <h3 className="about-title">{t("about.interestsTitle")}</h3>
+          <div className="about-tags">
+            {intereses.map((key) => (
+              <span key={key} className="about-tag">
+                {t(`about.interests.${key}`)}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Card 2 - Soft skills */}
+        <div className="about-content">
+          <div className="about-icon-wrap">
+            <i className="bx bx-user-voice about-icon"></i>
+          </div>
+          <h3 className="about-title">{t("about.softSkillsTitle")}</h3>
+          <div className="about-tags">
+            {softSkills.map((key) => (
+              <span key={key} className="about-tag">
+                {t(`about.softSkills.${key}`)}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Card 3 - Idiomas */}
         <div className="about-content">
           <div className="about-icon-wrap">
             <i className="bx bx-globe about-icon"></i>
@@ -32,10 +62,15 @@ const About = () => {
               <span className="about-row-sep">·</span>
               <span className="about-row-value">{t("about.langEnglishLevel")}</span>
             </div>
+            <div className="about-row">
+              <span className="about-row-label">{t("about.langItalian")}</span>
+              <span className="about-row-sep">·</span>
+              <span className="about-row-value">{t("about.langItalianLevel")}</span>
+            </div>
           </div>
         </div>
 
-        {/* Card 2 - Certificados */}
+        {/* Card 4 - Certificados */}
         <div className="about-content">
           <div className="about-icon-wrap">
             <i className="bx bx-certification about-icon"></i>
@@ -44,36 +79,6 @@ const About = () => {
           <div className="about-body">
             <div className="about-cert">Pearson English Interactive 3</div>
             <div className="about-cert">Technical English for Software Developers</div>
-          </div>
-        </div>
-
-        {/* Card 3 - Intereses */}
-        <div className="about-content">
-          <div className="about-icon-wrap">
-            <i className="bx bx-bulb about-icon"></i>
-          </div>
-          <h3 className="about-title">{t("about.interestsTitle")}</h3>
-          <div className="about-tags">
-            {intereses.map((key) => (
-              <span key={key} className="about-tag">
-                {t(`about.interests.${key}`)}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Card 4 - Soft skills */}
-        <div className="about-content">
-          <div className="about-icon-wrap">
-            <i className="bx bx-user-voice about-icon"></i>
-          </div>
-          <h3 className="about-title">{t("about.softSkillsTitle")}</h3>
-          <div className="about-tags">
-            {softSkills.map((key) => (
-              <span key={key} className="about-tag">
-                {t(`about.softSkills.${key}`)}
-              </span>
-            ))}
           </div>
         </div>
 

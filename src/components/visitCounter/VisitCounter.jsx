@@ -20,9 +20,11 @@ const VisitCounter = () => {
   if (!imageOk) return null;
 
   // URL del SVG oficial de GoatCounter.
+  // counter//.svg -> el path raiz (/) que es donde GoatCounter cuenta visitas
+  //   de portfolios single-page. TOTAL solo funciona si tenes multiples paths.
   // style=text -> devuelve solo el numero, sin "Visits:" prefix
   // no_branding=1 -> sin firma "Goat" abajo
-  const svgUrl = `https://${GOATCOUNTER_CODE}.goatcounter.com/counter//TOTAL.svg?style=text&no_branding=1`;
+  const svgUrl = `https://${GOATCOUNTER_CODE}.goatcounter.com/counter//.svg?style=text&no_branding=1`;
 
   return (
     <a
