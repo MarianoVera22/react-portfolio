@@ -1,7 +1,7 @@
 /* === VisitCounter ===
-   Mismo look que los social icons y copyright del footer.
-   El numero se renderiza como texto normal (no SVG embebido),
-   asi hereda la tipografia Jost y el color del footer.
+   Layout: icono + numero (SVG) + label, en linea horizontal.
+   El SVG de GoatCounter trae su propio fondo y texto rosa,
+   pero con style=none viene mas pelado y aca lo blanqueamos.
 */
 
 .visit-counter {
@@ -17,45 +17,27 @@
 }
 
 .visit-counter:hover {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.visit-counter i {
+.visit-counter-icon {
   font-size: 1rem;
   display: inline-flex;
   align-items: center;
   opacity: 0.85;
 }
 
-.visit-counter-number {
-  font-weight: var(--font-medium);
-  color: rgba(255, 255, 255, 0.85);
-  font-variant-numeric: tabular-nums;
+.visit-counter-img {
+  /* invert + saturate(0) -> texto blanco
+     brightness(2) -> mejor contraste */
+  filter: invert(1) saturate(0) brightness(2);
+  height: 0.95rem;
+  width: auto;
+  vertical-align: middle;
+  /* Sin background propio del SVG */
+  background: transparent;
 }
 
 .visit-counter-label {
   opacity: 0.9;
-}
-
-/* === Estado loading: skeleton sutil pulsante === */
-.visit-counter--loading {
-  cursor: default;
-}
-
-.visit-counter-skeleton {
-  opacity: 0.45;
-  animation: visit-counter-pulse 1.4s ease-in-out infinite;
-  letter-spacing: 1px;
-}
-
-@keyframes visit-counter-pulse {
-  0%, 100% { opacity: 0.25; }
-  50% { opacity: 0.65; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .visit-counter-skeleton {
-    animation: none;
-    opacity: 0.5;
-  }
 }
