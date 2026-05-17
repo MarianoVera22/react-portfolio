@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { useLanguage } from "../../context/LanguageContext";
-import VisitCounter from "../visitCounter/VisitCounter";
+// import VisitCounter from "../visitCounter/VisitCounter"; // Oculto temporalmente - tracking sigue activo via GoatCounter
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -60,7 +60,7 @@ const Footer = () => {
           {/* <br /> */}
           &#169; Mariano Vera Causich.
         </span>
-        <VisitCounter />
+        {/* <VisitCounter /> */}
       </div>
     </footer>
   );
