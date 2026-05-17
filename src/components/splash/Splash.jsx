@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Splash.css";
 
 // Tiempo minimo que se muestra el splash (evita parpadeo si la pagina carga muy rapido)
-const MIN_DURATION_MS = 1000;
+const MIN_DURATION_MS = 800;
 // Tiempo de la animacion de fade-out (debe coincidir con la transition del CSS)
 const FADE_OUT_MS = 400;
 
