@@ -196,6 +196,18 @@
     margin-left: 50%;
     transform: translateX(-50%);
   }
+
+  /* Centrar el wrapper de botón + iconos sociales en mobile */
+  .home_buttons {
+    justify-content: center;
+  }
+
+  /* El botón CV ya se centraba con su propio margin-left:50% que rompe
+     dentro del flex. Lo reseteamos aca para que el flex haga el centrado. */
+  .home_buttons .home_button {
+    margin-left: 0;
+    transform: none;
+  }
 }
 
 @media screen and (max-width: 350px) {

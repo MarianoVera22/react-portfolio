@@ -1,58 +1,58 @@
-/* === About: 4 cards en grid 2x2 ===
-   Estetica: matchea el resto del portfolio (cards blancas, borde sutil,
-   acento teal #1985a1 en iconos)
+/* === About: 4 cards en grid ===
+   Estetica replicada del componente Skills:
+   - mismo container blanco con borde 0.1
+   - padding generoso
+   - border-radius 1.25rem
+   - titulo centrado
+   - iconos en color titulo (gris oscuro, NO teal)
 */
 
 .about-container {
   grid-template-columns: repeat(2, 360px);
-  gap: 1.5rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
   justify-content: center;
 }
 
-.about-card {
+.about-content {
   background-color: var(--container-color);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 1.5rem 1.25rem;
-  border-radius: 1rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 2rem;
+  border-radius: 1.25rem;
 }
 
-.about-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  border-color: rgba(25, 133, 161, 0.25);
-}
-
-.about-card-icon {
-  display: inline-flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background-color: rgba(25, 133, 161, 0.12);
-  color: #1985a1;
-  align-items: center;
+.about-icon-wrap {
+  display: flex;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-card-title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  color: var(--title-color);
   margin-bottom: 0.75rem;
 }
 
-.about-card-body {
-  font-size: var(--small-font-size);
-  color: var(--text-color);
-  line-height: 1.7;
+.about-icon {
+  font-size: 1.75rem;
+  color: var(--title-color);
 }
 
+.about-title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+/* === Idiomas: una fila por idioma === */
 .about-row {
   display: flex;
-  gap: 0.4rem;
   align-items: baseline;
+  gap: 0.4rem;
 }
 
 .about-row-label {
@@ -60,55 +60,57 @@
   color: var(--title-color);
 }
 
+.about-row-sep {
+  color: var(--text-color);
+}
+
 .about-row-value {
   color: var(--text-color);
 }
 
-.about-row-single {
-  margin-bottom: 0.3rem;
+/* === Certificados: lista vertical centrada === */
+.about-cert {
+  text-align: center;
+  line-height: 1.4;
 }
 
-.about-row-single:last-child {
-  margin-bottom: 0;
-}
-
-/* === Tags (intereses y soft skills) === */
+/* === Tags (intereses y soft skills): mismo gris que skills === */
 .about-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .about-tag {
-  font-size: var(--smaller-font-size);
-  padding: 0.3rem 0.7rem;
-  background-color: hsl(var(--hue), var(--sat), 97%);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  padding: 0.35rem 0.75rem;
+  background-color: hsl(var(--hue), var(--sat), 95%);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   color: var(--title-color);
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .about-tag:hover {
-  background-color: rgba(25, 133, 161, 0.08);
-  border-color: rgba(25, 133, 161, 0.3);
-  color: #1985a1;
+  background-color: hsl(var(--hue), var(--sat), 90%);
 }
 
-/* === Responsive === */
+/* === Responsive (replicando lo de Skills.css) === */
 @media screen and (max-width: 992px) {
   .about-container {
-    grid-template-columns: repeat(2, minmax(0, 320px));
-    gap: 1rem;
-  }
-
-  .about-card {
-    padding: 1.25rem 1rem;
+    grid-template-columns: max-content;
+    row-gap: 2rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .about-container {
-    grid-template-columns: minmax(0, 380px);
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    padding: 1.5rem 1rem;
   }
 }

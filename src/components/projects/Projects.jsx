@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Projects.css";
 import { useLanguage } from "../../context/LanguageContext";
 import { trackEvent } from "../../utils/analytics";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 import aspnet from "../../assets/csharp-net.png";
 import listado from "../../assets/listadodetareas.png";
 import calculadora from "../../assets/calculadora.png";
@@ -21,7 +20,6 @@ import automatismo from "../../assets/automatizacion2-1.jpg";
 const Projects = () => {
   const [toggleState, setToggleState] = useState(0);
   const { t } = useLanguage();
-  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.05 });
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -34,12 +32,7 @@ const Projects = () => {
     <section className="projects section" id="proyectos">
       <h2 className="section-title">{t("projects.title")}</h2>
       <span className="section-subtitle">{t("projects.subtitle")}</span>
-      <div
-        ref={gridRef}
-        className={`projects-container container grid ${
-          gridVisible ? "projects-container--revealed" : ""
-        }`}
-      >
+      <div className="projects-container container grid">
       
         {/* Proyecto 7: Proyecto dietetica*/}
         <div className="projects-card">
