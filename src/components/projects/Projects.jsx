@@ -3,19 +3,19 @@ import "./Projects.css";
 import { useLanguage } from "../../context/LanguageContext";
 import { trackEvent } from "../../utils/analytics";
 import aspnet from "../../assets/csharp-net.png";
-import listado from "../../assets/listadodetareas.png";
-import calculadora from "../../assets/calculadora.png";
-import presupuesto from "../../assets/presupuesto.png";
-import luces from "../../assets/luces.png";
-import vision from "../../assets/opencv-python.png";
-import tesis from "../../assets/Sistema-completo-real.jpg";
+import listado from "../../assets/listadodetareas_4x3.png";
+import calculadora from "../../assets/calculadora_4x3.png";
+import presupuesto from "../../assets/presupuesto_4x3.png";
+import luces from "../../assets/luces_4x3.png";
+import vision from "../../assets/opencv-python_4x3.png";
+import tesis from "../../assets/Sistema-completo-real_4x3.jpg";
 import informetesis from "../../assets/TesisCampetellaVera.pdf";
 import informetd2 from "../../assets/ProyectoFinalTDII.pdf";
-import transbordador from "../../assets/Transbordador.jpeg";
-import r4004 from "../../assets/Gemini_Generated_Image_fflh6vfflh6vfflh.png";
-import dietetica from "../../assets/dietetica.jpeg";
-import automatismo from "../../assets/automatizacion2-1.jpg";
-
+import transbordador from "../../assets/Transbordador_4x3.jpeg";
+import r4004 from "../../assets/4004_4x3.png";
+import dietetica from "../../assets/Dietetica_4x3.jpeg";
+import automatismo from "../../assets/automatizacion2-1-4x3.jpg";
+import plctag from "../../assets/PLCTAG_4x3.png";
 
 const Projects = () => {
   const [toggleState, setToggleState] = useState(0);
@@ -34,6 +34,80 @@ const Projects = () => {
       <span className="section-subtitle">{t("projects.subtitle")}</span>
       <div className="projects-container container grid">
       
+         {/* Proyecto 8: PLC Tag validator*/}
+        <div className="projects-card">
+          <img
+            src={plctag}
+            alt="PLC Tag validator"
+            className="projects-img"
+            onClick={() => toggleTab(15)}
+          />
+          <h3 className="projects-title">{t("projects.p11CardTitle")}</h3>
+          <span className="projects-button" onClick={() => toggleTab(15)}>
+            {t("projects.seeMore")}{" "}
+            <i className="bx bx-right-arrow-alt projects-button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 15
+                ? "projects-modal active-modal"
+                : "projects-modal"
+            }
+          >
+            <div className="projects-modal-content">
+              <i
+                className="uil uil-times projects-modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+              <h3 className="projects-modal-title">
+                {t("projects.p11ModalTitle")}
+              </h3>
+              <p className="projects-modal-description">
+                {t("projects.p11Desc1")}
+                <br />
+                {t("projects.p11Desc2")}
+                <br />
+                {t("projects.p11Desc3")}
+              </p>
+              <p className="projects-modal-skills-title">
+                {t("projects.toolsUsed")}
+              </p>
+              {/* ICONOS DE HERRAMIENTAS */}
+              <ul className="projects-modal-skills">
+                <svg height="40" width="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m.086 13.761v-.722c.41.13.775.195 1.09.195.437 0 .654-.115.654-.347a.278.278 0 0 0 -.096-.216c-.063-.063-.23-.148-.499-.258-.479-.198-.794-.365-.939-.507a.934.934 0 0 1 -.283-.695c0-.36.139-.637.414-.825.27-.188.626-.28 1.062-.28.24 0 .589.043 1.045.133v.692a2.58 2.58 0 0 0 -.945-.202c-.41 0-.613.112-.613.339 0 .084.04.15.124.205.067.042.257.134.565.273.446.197.742.368.891.516a.904.904 0 0 1 .264.673.992.992 0 0 1 -.517.904c-.278.17-.64.256-1.083.256a4.88 4.88 0 0 1 -1.134-.134zm3.31-3.592h1.018v3.65h-1.019zm1.953 3.65v-3.65h2.616v.66h-1.633v.826h1.422v.602h-1.422v.866h1.675v.697zm3.325 0v-3.65h1.322l.917 2.333.943-2.333h1.257v3.65h-.969v-2.584l-1.07 2.622h-.631l-1.05-2.622v2.585h-.72zm5.373 0v-3.65h2.615v.66h-1.632v.826h1.421v.602h-1.421v.866h1.676v.697zm3.33 0v-3.65h1.18l1.255 2.445v-2.444h.72v3.65h-1.152l-1.285-2.475v2.476zm3.878-.058v-.722c.406.13.77.195 1.09.195.436 0 .653-.115.653-.347a.293.293 0 0 0 -.091-.216c-.066-.063-.234-.148-.503-.258-.48-.196-.794-.364-.94-.507a.936.936 0 0 1 -.284-.698c0-.359.138-.634.413-.822.272-.188.626-.28 1.061-.28.249 0 .566.038.956.116l.09.017v.692a2.583 2.583 0 0 0 -.945-.202c-.409 0-.613.112-.613.339 0 .084.04.15.124.204.066.042.254.133.57.274.443.196.738.368.887.516a.903.903 0 0 1 .263.673c0 .396-.17.698-.51.904-.283.17-.644.256-1.089.256-.381 0-.76-.046-1.132-.134z"
+                    /></svg>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-python"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-visual-studio"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-git"></i>
+                </li>
+              </ul>
+              <ul className="projects-modal-links">
+                {/* <a className='projects-modal-button button-flex' href="https://www.google.com/" target='_blanck'>
+                                App<i class='bx bx-link-external projects-modal-button-icon'></i>
+                            </a> */}
+                <a
+                  className="projects-modal-button button-flex"
+                  href="https://github.com/MarianoVera22/plc-tag-validator"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("projects.btnRepo")}
+                  <i class="bx bxl-github projects-modal-button-icon"></i>
+                </a>
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                                Documento<i class='bx bxs-download projects-modal-button-icon'></i>
+                            </a> */}
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Proyecto 7: Proyecto dietetica*/}
         <div className="projects-card">
           <img
@@ -114,7 +188,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        {/* Proyecto 8: Proyecto dietetica*/}
+        {/* Proyecto 8: Instructivos*/}
         <div className="projects-card">
           <img
             src={automatismo}
@@ -832,7 +906,7 @@ const Projects = () => {
         </div>*/}
 
         {/* Proyecto 1: Secuencia de luces*/}
-        <div className="projects-card">
+        {/* <div className="projects-card">
           <img
             src={luces}
             alt="asd"
@@ -871,7 +945,7 @@ const Projects = () => {
                 {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
-              <ul className="projects-modal-skills">
+              {/* <ul className="projects-modal-skills">
                 <li className="projects-modal-icon">
                   <i class="bx bxl-c-plus-plus"></i>
                 </li>
@@ -896,7 +970,7 @@ const Projects = () => {
                 {/* <a className='projects-modal-button button-flex' href="">
                             {t("projects.btnApp")}
                         </a> */}
-                <a
+                {/* <a
                   className="projects-modal-button button-flex"
                   href="https://github.com/MarianoVera22/Tecnicas-Digitales-II"
                   target="_blank"
@@ -913,10 +987,10 @@ const Projects = () => {
                   {t("projects.btnDoc")}
                   <i class="bx bxs-download projects-modal-button-icon"></i>
                 </a>
-              </ul>
-            </div>
-          </div>
-        </div>
+              </ul> */}
+            {/* </div> */}
+          {/* </div> */}
+        {/* </div> */} 
       </div>
     </section>
   );

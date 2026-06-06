@@ -126,11 +126,11 @@ const translations = {
         "Stack: React 18, Vite 5, JavaScript moderno, CSS3 con variables nativas para tema dinámico, SVG inline.",
 
       // Proyecto 2 - R4004
-      p2CardTitle: "Upgrade de variadores en impresora flexográfica",
+      p2CardTitle: "Upgrade de variadores en impresora industrial",
       p2ModalTitle:
         "Migración de variadores Schneider Altivar 71 a ATV960 en impresora de flexibles R4004",
       p2Desc1:
-        "La impresora flexográfica R4004 operaba con variadores Schneider Altivar 71 declarados obsoletos por el fabricante, sin stock garantizado de repuestos. Una falla habría dejado la línea fuera de servicio por tiempo indeterminado.",
+        "La impresora industrial R4004 operaba con variadores Schneider Altivar 71 declarados obsoletos por el fabricante, sin stock garantizado de repuestos. Una falla habría dejado la línea fuera de servicio por tiempo indeterminado.",
       p2Desc2:
         "Ejecuté la migración completa a variadores Schneider ATV960: dimensionamiento, cableado e instalación física de los nuevos equipos, y reconfiguración del proyecto PLC en Step 7 — actualización de la topología de red Profinet, ajustes de hardware y reescritura del bloque de comunicación PLC–variador para asegurar el correcto intercambio de datos.",
       p2Desc3:
@@ -216,6 +216,16 @@ const translations = {
         "La capacitación involucró sesiones prácticas a +10 técnicos de mantenimiento, transformando un equipo con exposición técnica mínima en uno capaz de realizar diagnósticos básicos de PLC, configurar variadores y manejar entornos virtualizados. Todo el material fue documentado formalmente e integrado de manera permanente a la base de conocimiento de la empresa, asegurando un impacto duradero más allá de mi paso por la organización.",
       p10Desc3:
         "Este proyecto refleja lo que más valoro en la ingeniería: no solo resolver problemas, sino empoderar a otros para que también puedan hacerlo.",
+
+      // Proyecto 11 - PLC Tag Validator
+      p11CardTitle: "PLC Tag Validator",
+      p11ModalTitle: "Validador de Etiquetas PLC",
+      p11Desc1:
+        "En proyectos de automatización industrial, una configuración mal cargada al PLC puede frenar una puesta en marcha durante horas, con técnicos en planta y el cliente esperando.",
+      p11Desc2:
+        "Esta herramienta de línea de comandos valida los archivos de configuración (CSV o JSON) antes de cargarlos al PLC. Detecta direcciones Siemens S7 mal formadas, incoherencias entre tipo y dirección, nombres duplicados y otros problemas comunes en menos de un segundo, sobre listados de cientos de tags.",
+      p11Desc3:
+        "El resultado es un cambio de paradigma: lo que antes se debuggeaba en planta durante 3 o 4 horas, ahora se resuelve en oficina antes de viajar. Menos costos de hora-técnico, menos demoras al cliente, más confianza en cada puesta en marcha.",
     },
 
     contact: {
@@ -405,11 +415,11 @@ const translations = {
         "Stack: React 18, Vite 5, modern JavaScript, CSS3 with native variables for dynamic theming, inline SVG.",
 
       // Project 2 - R4004
-      p2CardTitle: "Frequency drive upgrade on flexographic printer",
+      p2CardTitle: "Frequency drive upgrade on industrial printer",
       p2ModalTitle:
         "Schneider Altivar 71 to ATV960 drive migration on R4004 flexible printer",
       p2Desc1:
-        "The R4004 flexographic printer was running on Schneider Altivar 71 drives, declared obsolete by the manufacturer with no guaranteed spare parts supply. A single failure could have taken the line out of service for an indefinite period.",
+        "The R4004 industrial printer was running on Schneider Altivar 71 drives, declared obsolete by the manufacturer with no guaranteed spare parts supply. A single failure could have taken the line out of service for an indefinite period.",
       p2Desc2:
         "I executed the full migration to Schneider ATV960 drives: sizing, wiring and physical installation of the new units, and reconfiguration of the PLC project in Step 7 — updating the Profinet network topology, adjusting the hardware setup and rewriting the PLC–drive communication block to ensure proper data exchange.",
       p2Desc3:
@@ -494,7 +504,18 @@ const translations = {
         "The training involved hands-on sessions with 10+ maintenance technicians, transforming a team with minimal technical exposure into one capable of performing basic PLC diagnostics, configuring VFDs, and navigating virtualized environments. All instructional materials were formally documented and permanently integrated into the company's knowledge base, ensuring long-term impact beyond my tenure..",
       p10Desc3:
         "This project reflects what I value most in engineering: not just solving problems, but empowering others to solve them too.", 
-    },
+      
+      // Project 11 - PLC Tag Validator
+      p11CardTitle: "PLC Tag Validator",
+      p11ModalTitle: "PLC Tag Validator",
+      p11Desc1:
+        "In industrial automation projects, a misconfigured PLC can stall commissioning for hours, with technicians on-site and the client waiting. Simple errors like a mistyped address, a type mismatch, or two tags pointing to the same memory location are typically caught only in the field, where they cost real money.",
+      p11Desc2:
+        "This command-line tool validates configuration files (CSV or JSON) before they reach the PLC. It detects malformed Siemens S7 addresses, type-address inconsistencies, duplicate names, and other common issues in under a second, even across hundreds of tags.",
+      p11Desc3:
+        "The outcome is a shift in workflow: what used to take 3–4 hours of on-site debugging is now resolved in the office before traveling. Lower technician-hour costs, fewer delays for the client, and more confidence in every commissioning.",    
+      },
+      
 
     contact: {
       title: "Contact",
