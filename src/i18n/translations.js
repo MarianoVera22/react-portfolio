@@ -226,7 +226,17 @@ const translations = {
         "Esta herramienta de línea de comandos valida los archivos de configuración (CSV o JSON) antes de cargarlos al PLC. Detecta direcciones Siemens S7 mal formadas, incoherencias entre tipo y dirección, nombres duplicados y otros problemas comunes en menos de un segundo, sobre listados de cientos de tags.",
       p11Desc3:
         "El resultado es un cambio de paradigma: lo que antes se debuggeaba en planta durante 3 o 4 horas, ahora se resuelve en oficina antes de viajar. Menos costos de hora-técnico, menos demoras al cliente, más confianza en cada puesta en marcha.",
-    },
+
+      // Proyecto 12 - Dashboard OEE
+      p12CardTitle: "Dashboard OEE",
+      p12ModalTitle: "Dashboard de Eficiencia Operativa",
+      p12Desc1:
+        "Dashboard web interactivo para analizar la eficiencia de líneas de producción industrial mediante el indicador OEE (Overall Equipment Effectiveness). Calcula disponibilidad, rendimiento y calidad por máquina, turno y rango de fechas, e identifica las principales causas de paro con análisis de Pareto.",
+      p12Desc2:
+        "Incluye filtros dinámicos, tendencia temporal con promedio móvil para distinguir señal de ruido, y exportación de reportes a Excel. Desplegado en la nube y accesible desde el navegador, sin instalación.",
+      p12Desc3:
+        "Construido con prácticas de software profesional: lógica de cálculo separada de la presentación y testeada de forma independiente, type-checking estricto, e integración continua. Los datos son sintéticos, generados con lógica de negocio realista.",    
+      },
 
     contact: {
       title: "Contacto",
@@ -514,9 +524,18 @@ const translations = {
         "This command-line tool validates configuration files (CSV or JSON) before they reach the PLC. It detects malformed Siemens S7 addresses, type-address inconsistencies, duplicate names, and other common issues in under a second, even across hundreds of tags.",
       p11Desc3:
         "The outcome is a shift in workflow: what used to take 3–4 hours of on-site debugging is now resolved in the office before traveling. Lower technician-hour costs, fewer delays for the client, and more confidence in every commissioning.",    
+
+      // Project 12 - Dashboard OEE
+      p12CardTitle: "OEE Dashboard",
+      p12ModalTitle: "Overall Equipment Effectiveness Dashboard",
+      p12Desc1:
+        "Interactive web dashboard for analyzing industrial production line efficiency through the OEE (Overall Equipment Effectiveness) metric. Computes availability, performance, and quality by machine, shift, and date range, and identifies the main downtime causes via Pareto analysis.",
+      p12Desc2:  
+        "Features dynamic filters, a time-series trend with a moving average to separate signal from noise, and Excel report export. Deployed to the cloud and accessible from the browser, no installation required.",
+      p12Desc3:
+        "Built with professional software practices: calculation logic decoupled from presentation and tested independently, strict type-checking, and continuous integration. Data is synthetic, generated with realistic business logic.",    
       },
       
-
     contact: {
       title: "Contact",
       subtitle: "Contact me through any channel",

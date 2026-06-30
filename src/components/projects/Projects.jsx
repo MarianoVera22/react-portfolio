@@ -16,6 +16,7 @@ import r4004 from "../../assets/4004_4x3.png";
 import dietetica from "../../assets/Dietetica_4x3.jpeg";
 import automatismo from "../../assets/automatizacion2-1-4x3.jpg";
 import plctag from "../../assets/PLCTAG_4x3.png";
+import dashboard from "../../assets/dashboard.png";
 
 const Projects = () => {
   const [toggleState, setToggleState] = useState(0);
@@ -34,6 +35,87 @@ const Projects = () => {
       <span className="section-subtitle">{t("projects.subtitle")}</span>
       <div className="projects-container container grid">
       
+        {/* Proyecto 9: OEE Dashboard*/}
+        <div className="projects-card">
+          <img
+            src={dashboard}
+            alt="dashboard"
+            className="projects-img"
+            onClick={() => toggleTab(16)}
+          />
+          <h3 className="projects-title">{t("projects.p12CardTitle")}</h3>
+          <span className="projects-button" onClick={() => toggleTab(16)}>
+            {t("projects.seeMore")}{" "}
+            <i className="bx bx-right-arrow-alt projects-button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 16
+                ? "projects-modal active-modal"
+                : "projects-modal"
+            }
+          >
+            <div className="projects-modal-content">
+              <i
+                className="uil uil-times projects-modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+              <h3 className="projects-modal-title">
+                {t("projects.p12ModalTitle")}
+              </h3>
+              <p className="projects-modal-description">
+                {t("projects.p12Desc1")}
+                <br />
+                {t("projects.p12Desc2")}
+                <br />
+                {t("projects.p12Desc3")}
+              </p>
+              <p className="projects-modal-skills-title">
+                {t("projects.toolsUsed")}
+              </p>
+              {/* ICONOS DE HERRAMIENTAS */}
+              <ul className="projects-modal-skills">
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-python"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-visual-studio"></i>
+                </li>
+                <li className="projects-modal-icon">
+                  <i class="bx bxl-git"></i>
+                </li>
+              </ul>
+              <ul className="projects-modal-links">
+                {/* <a className='projects-modal-button button-flex' href="https://www.google.com/" target='_blanck'>
+                                App<i class='bx bx-link-external projects-modal-button-icon'></i>
+                            </a> */}
+                <a
+                  className="projects-modal-button button-flex"
+                  href="https://marianovera-oee-dashboard.streamlit.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("projects.btnApp")}
+                  <i class="bx bx-link-external projects-modal-button-icon"></i>
+                </a>
+                <a
+                  className="projects-modal-button button-flex"
+                  href="https://github.com/MarianoVera22/oee-dashboard"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("projects.btnRepo")}
+                  <i class="bx bxl-github projects-modal-button-icon"></i>
+                </a>
+                {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
+                                Documento<i class='bx bxs-download projects-modal-button-icon'></i>
+                            </a> */}
+              </ul>
+            </div>
+          </div>
+        </div>
+
          {/* Proyecto 8: PLC Tag validator*/}
         <div className="projects-card">
           <img
@@ -636,8 +718,9 @@ const Projects = () => {
             </div>
           </div>
         </div>
+
         {/* Proyecto x: Listado de tareas */}
-        <div className="projects-card">
+        {/* <div className="projects-card">
           <img
             src={listado}
             alt="asd"
@@ -674,7 +757,7 @@ const Projects = () => {
                 {t("projects.toolsUsed")}
               </p>
               {/* ICONOS DE HERRAMIENTAS */}
-              <ul className="projects-modal-skills">
+              {/* <ul className="projects-modal-skills">
                 <li className="projects-modal-icon">
                   <i class="bx bxl-html5"></i>
                 </li>
@@ -712,14 +795,16 @@ const Projects = () => {
                 >
                   {t("projects.btnRepo")}
                   <i class="bx bxl-github projects-modal-button-icon"></i>
-                </a>
+                </a> */}
                 {/* <a className='projects-modal-button button-flex' href={informetesis} download="">
                             Documento<i class='bx bxs-download projects-modal-button-icon'></i>
                         </a> */}
-              </ul>
+              {/* </ul>
             </div>
           </div>
-        </div> 
+        </div>  */} 
+
+
         {/* Proyecto 2: Vision por computadora */}
         <div className="projects-card">
           <img
@@ -822,6 +907,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
+
         {/* Proyecto x: Calculadora */}
         {/*<div className="projects-card">
           <img
